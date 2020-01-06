@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ECOViewHierarchyViewController">
+            <connections>
+                <outlet property="headerBox" destination="gei-Ee-Rr3" id="n53-GQ-Zbk"/>
+                <outlet property="progressIndicator" destination="gTO-iT-Bfj" id="FcT-PM-7MB"/>
+                <outlet property="refreshBtn" destination="zZX-4s-ftj" id="fns-yr-zcM"/>
+                <outlet property="splitView" destination="wom-Gp-lL1" id="fHB-Kw-gR2"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="619" height="418"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="gei-Ee-Rr3">
+                    <rect key="frame" x="0.0" y="373" width="619" height="45"/>
+                    <view key="contentView" id="Wfl-ZL-XMl">
+                        <rect key="frame" x="0.0" y="0.0" width="619" height="45"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <box boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-E0-ELy">
+                                <rect key="frame" x="10" y="8" width="260" height="30"/>
+                                <view key="contentView" id="j9e-Xq-eNN">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rQK-mS-ueQ">
+                                            <rect key="frame" x="4" y="-6" width="82" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="iS8-ka-asA"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="push" title="重置" bezelStyle="rounded" image="view_menu_reset" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fVc-QD-cki">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <color key="contentTintColor" name="view_menu_color"/>
+                                            <connections>
+                                                <action selector="clickedMenuResetButton:" target="-2" id="pHu-B7-wcd"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zZX-4s-ftj">
+                                            <rect key="frame" x="84" y="-6" width="82" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="bXF-sX-c2R"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="push" title="刷新" bezelStyle="rounded" image="view_menu_refresh" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Etw-zx-jRK">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <color key="contentTintColor" name="view_menu_color"/>
+                                            <connections>
+                                                <action selector="clickedMenuRefreshButton:" target="-2" id="5NN-dN-KuU"/>
+                                            </connections>
+                                        </button>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-iT-Bfj">
+                                            <rect key="frame" x="170" y="1" width="16" height="16"/>
+                                        </progressIndicator>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rQK-mS-ueQ" firstAttribute="top" secondItem="j9e-Xq-eNN" secondAttribute="top" constant="8" id="7zq-lj-OYJ"/>
+                                        <constraint firstItem="zZX-4s-ftj" firstAttribute="leading" secondItem="rQK-mS-ueQ" secondAttribute="trailing" constant="10" id="KVj-fs-wDI"/>
+                                        <constraint firstItem="rQK-mS-ueQ" firstAttribute="leading" secondItem="j9e-Xq-eNN" secondAttribute="leading" constant="10" id="b9M-9F-ZWa"/>
+                                        <constraint firstItem="zZX-4s-ftj" firstAttribute="top" secondItem="j9e-Xq-eNN" secondAttribute="top" constant="8" id="e5q-tE-e21"/>
+                                        <constraint firstItem="gTO-iT-Bfj" firstAttribute="top" secondItem="j9e-Xq-eNN" secondAttribute="top" constant="13" id="hYV-2P-DI6"/>
+                                        <constraint firstItem="gTO-iT-Bfj" firstAttribute="leading" secondItem="zZX-4s-ftj" secondAttribute="trailing" constant="10" id="r4P-Uc-r2t"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="2Wb-rr-G8a"/>
+                                    <constraint firstAttribute="height" constant="30" id="x5n-a0-y7K"/>
+                                </constraints>
+                                <color key="fillColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zQs-E0-ELy" firstAttribute="leading" secondItem="Wfl-ZL-XMl" secondAttribute="leading" constant="10" id="Tog-lq-DtW"/>
+                            <constraint firstItem="zQs-E0-ELy" firstAttribute="centerY" secondItem="Wfl-ZL-XMl" secondAttribute="centerY" id="lPW-xU-S6Q"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="pWP-gT-NiD"/>
+                    </constraints>
+                    <color key="fillColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </box>
+                <box boxType="custom" borderWidth="0.0" cornerRadius="20" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="21p-rR-5Kv">
+                    <rect key="frame" x="10" y="15" width="594" height="348"/>
+                    <view key="contentView" id="srG-T8-PSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="594" height="348"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wom-Gp-lL1" customClass="ECOSplitView">
+                                <rect key="frame" x="10" y="10" width="574" height="328"/>
+                            </splitView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wom-Gp-lL1" secondAttribute="trailing" constant="10" id="6BX-uR-fVb"/>
+                            <constraint firstItem="wom-Gp-lL1" firstAttribute="top" secondItem="srG-T8-PSJ" secondAttribute="top" constant="10" id="7bj-rE-zB2"/>
+                            <constraint firstItem="wom-Gp-lL1" firstAttribute="leading" secondItem="srG-T8-PSJ" secondAttribute="leading" constant="10" id="8GY-OH-Ndb"/>
+                            <constraint firstAttribute="bottom" secondItem="wom-Gp-lL1" secondAttribute="bottom" constant="10" id="yVU-4M-pOV"/>
+                        </constraints>
+                    </view>
+                    <color key="fillColor" name="view_hierarchy_color"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gei-Ee-Rr3" secondAttribute="trailing" id="1c2-r8-QA2"/>
+                <constraint firstItem="gei-Ee-Rr3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="8Lj-zC-HLa"/>
+                <constraint firstItem="gei-Ee-Rr3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Gt3-UM-8vw"/>
+                <constraint firstAttribute="trailing" secondItem="21p-rR-5Kv" secondAttribute="trailing" constant="15" id="Vrh-3r-4Ih"/>
+                <constraint firstAttribute="bottom" secondItem="21p-rR-5Kv" secondAttribute="bottom" constant="15" id="jva-bB-PAc"/>
+                <constraint firstItem="21p-rR-5Kv" firstAttribute="top" secondItem="gei-Ee-Rr3" secondAttribute="bottom" constant="10" id="uR6-Fs-zMg"/>
+                <constraint firstItem="21p-rR-5Kv" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="yqf-wp-c5E"/>
+            </constraints>
+            <point key="canvasLocation" x="208.5" y="227"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="view_menu_refresh" width="250" height="235.5"/>
+        <image name="view_menu_reset" width="250" height="202.5"/>
+        <namedColor name="view_hierarchy_color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="view_menu_color">
+            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

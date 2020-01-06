@@ -1,0 +1,118 @@
+PODS:
+  - BSBacktraceLogger (0.0.1)
+  - CocoaAsyncSocket (7.6.3)
+  - EchoSDK (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/Plugins (= 0.0.1)
+  - EchoSDK/ClientSDK (0.0.1):
+    - CocoaAsyncSocket
+  - EchoSDK/Core (0.0.1):
+    - CocoaAsyncSocket
+  - EchoSDK/Plugins (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+    - EchoSDK/Plugins/Basic (= 0.0.1)
+    - EchoSDK/Plugins/Crash (= 0.0.1)
+    - EchoSDK/Plugins/GeneralLog (= 0.0.1)
+    - EchoSDK/Plugins/MemoryLeak (= 0.0.1)
+    - EchoSDK/Plugins/MockGPS (= 0.0.1)
+    - EchoSDK/Plugins/Network (= 0.0.1)
+    - EchoSDK/Plugins/Notification (= 0.0.1)
+    - EchoSDK/Plugins/NSLog (= 0.0.1)
+    - EchoSDK/Plugins/NSUserDefaults (= 0.0.1)
+    - EchoSDK/Plugins/UI (= 0.0.1)
+    - EchoSDK/Plugins/ViewBorder (= 0.0.1)
+    - EchoSDK/Plugins/Watchdog (= 0.0.1)
+  - EchoSDK/Plugins/Basic (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/Crash (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/GeneralLog (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+    - fishhook
+  - EchoSDK/Plugins/MemoryLeak (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+    - MLeaksFinder
+    - RSSwizzle
+  - EchoSDK/Plugins/MockGPS (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+    - JZLocationConverter
+  - EchoSDK/Plugins/Network (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/Notification (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/NSLog (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/NSUserDefaults (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/UI (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/ViewBorder (0.0.1):
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - EchoSDK/Plugins/Watchdog (0.0.1):
+    - BSBacktraceLogger
+    - CocoaAsyncSocket
+    - EchoSDK/ClientSDK
+    - EchoSDK/Core
+  - FBRetainCycleDetector (0.1.4)
+  - fishhook (0.2)
+  - JZLocationConverter (1.0.0)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - RSSwizzle (0.1.0)
+
+DEPENDENCIES:
+  - EchoSDK (from `../../`)
+  - fishhook
+  - RSSwizzle
+
+SPEC REPOS:
+  trunk:
+    - BSBacktraceLogger
+    - CocoaAsyncSocket
+    - FBRetainCycleDetector
+    - fishhook
+    - JZLocationConverter
+    - MLeaksFinder
+    - RSSwizzle
+
+EXTERNAL SOURCES:
+  EchoSDK:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  BSBacktraceLogger: 06b983ee93a9f87d957960e9c73d660d5966b447
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  EchoSDK: bec826d285ff6ef30ca5e2fd517602410871d8fa
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
+  JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
+
+PODFILE CHECKSUM: 0bb9b970c84925ab5d5b3f647efc357158bedb8f
+
+COCOAPODS: 1.8.4

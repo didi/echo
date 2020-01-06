@@ -1,0 +1,27 @@
+PODS:
+  - CocoaAsyncSocket (7.6.3)
+  - EchoSDK/Core (0.0.1):
+    - CocoaAsyncSocket
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - EchoSDK/Core (from `../`)
+  - Masonry
+
+SPEC REPOS:
+  trunk:
+    - CocoaAsyncSocket
+    - Masonry
+
+EXTERNAL SOURCES:
+  EchoSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  EchoSDK: bec826d285ff6ef30ca5e2fd517602410871d8fa
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 0b91a250fb76a58eb333235430d240604b1c8589
+
+COCOAPODS: 1.8.4

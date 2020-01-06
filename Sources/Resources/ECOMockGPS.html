@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="./echoJS.js"></script>
+        <script src="https://webapi.amap.com/maps?v=1.4.15"></script>
+        <style type="text/css">
+            html {font-family:sans-serif;}
+            h1 {font-size:18px;margin:5px 0;}
+            #nav {
+                margin:10px 0;
+                height:80px;
+                text-align:center;
+            }
+            #nav p {
+                margin:10px 0;
+                color:#505050;
+                font-size:14px;
+            }
+            #lnglat {
+                padding:0;
+                width:200px;
+                height:25px;
+                box-sizing:border-box;
+            }
+            #sendBtn {
+                padding:0 10px;
+                background-color:#FFB947;
+                border-radius:2px;
+                border:0px;
+                height:25px;
+                color:#505050;
+            }
+            .amap-icon img,
+            .amap-marker-content img{
+                width:25px;
+                height:34px;
+            }
+            #container {
+                width:100%;
+                position:absolute;
+                top:80px;
+                bottom:0px;
+                left:0px;
+                border-radius:40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <input type="text" id="lnglat">
+            <button id="sendBtn" onclick="clickedSend()">发送经纬度</button>
+            <p>单击地图获取经纬度</p>
+        </div>
+        <div id="container"></div>
+        <p id="result"></p>
+    </body>
+
+    <script type="text/javascript">
+        function clickedSend() {
+            let $input = document.querySelector("#lnglat");
+            echoSend($input.value);
+        }
+        function echoReceived(params) {
+            let $p = document.querySelector("#result");
+            $p.innerText = params;
+            setTimeout(function() {
+                $p.innerText = "";
+            }, 3000);
+        }
+    </script>
+
+    <script type="text/javascript">
+        var map = new AMap.Map('container', {
+           center: [116.397233,39.908605],
+           zoom:13
+        });
+        map.on('click', function(e) {
+            document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat();
+            addMarker(e.lnglat);
+        });
+        var marker;
+        function addMarker(location) {
+            if (marker) {
+                marker.setMap(null);
+                marker = null;
+            }
+            marker = new AMap.Marker({
+                icon: "https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png",
+                position: location,
+                offset: new AMap.Pixel(-13, -30)
+            });
+            marker.setMap(map);
+        }
+        AMap.plugin([
+            'AMap.ToolBar',
+        ], function(){
+            map.addControl(new AMap.ToolBar({
+                liteStyle: true
+            }));
+        });
+    </script>
+</html>

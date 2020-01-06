@@ -1,0 +1,975 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11F912CCAC49A64B38E2A9D9 /* libPods-Echo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D99B640572F55C82693F1351 /* libPods-Echo.a */; };
+		6931BE3A238E8A0000C8203D /* ECODarkModeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6931BE38238E8A0000C8203D /* ECODarkModeHelper.m */; };
+		694C5552233A236000D61F45 /* ECODeviceConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 694C5551233A236000D61F45 /* ECODeviceConnectView.m */; };
+		6950EC4D22A6727E00CB9FC1 /* json-viewer.js in Resources */ = {isa = PBXBuildFile; fileRef = 6950EC4822A6727E00CB9FC1 /* json-viewer.js */; };
+		6950EC4E22A6727E00CB9FC1 /* jsonviewer.html in Resources */ = {isa = PBXBuildFile; fileRef = 6950EC4922A6727E00CB9FC1 /* jsonviewer.html */; };
+		6950EC4F22A6727E00CB9FC1 /* json-viewer-dark-theme.css in Resources */ = {isa = PBXBuildFile; fileRef = 6950EC4A22A6727E00CB9FC1 /* json-viewer-dark-theme.css */; };
+		6950EC5022A6727E00CB9FC1 /* json-viewer-light-theme.css in Resources */ = {isa = PBXBuildFile; fileRef = 6950EC4B22A6727E00CB9FC1 /* json-viewer-light-theme.css */; };
+		6950EC5122A6727E00CB9FC1 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 6950EC4C22A6727E00CB9FC1 /* jquery.js */; };
+		6951ED142294EB3800E0EC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6951ED132294EB3800E0EC9D /* Assets.xcassets */; };
+		695CC1EA2340506E002E9601 /* ECONetworkListTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695CC1E92340506E002E9601 /* ECONetworkListTableCellView.m */; };
+		695E976D232F95E100544ACF /* ECOTemplateOutlineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 695E976C232F95E100544ACF /* ECOTemplateOutlineCell.m */; };
+		696E4D812264850D005C6A1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 696E4D802264850D005C6A1F /* AppDelegate.m */; };
+		696E4D8922648510005C6A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696E4D8722648510005C6A1F /* Main.storyboard */; };
+		696E4D8C22648510005C6A1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 696E4D8B22648510005C6A1F /* main.m */; };
+		6970106D2305078400FC8683 /* ECOTemplateListDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6970106C2305078400FC8683 /* ECOTemplateListDetailCell.m */; };
+		69708509228CFED30075CFBA /* ECOPacketsDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 69708508228CFED30075CFBA /* ECOPacketsDispatcher.m */; };
+		6970850D228D11A50075CFBA /* ECOProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6970850C228D11A50075CFBA /* ECOProjectModel.m */; };
+		6974925F23151D390005E6BC /* YVRightCellViewClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6974925C23151D390005E6BC /* YVRightCellViewClass.xib */; };
+		6974926023151D390005E6BC /* YVRightCellViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6974925E23151D390005E6BC /* YVRightCellViewClass.m */; };
+		697FBFC1230BF3E5006C209E /* ECOSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 697FBFC0230BF3E5006C209E /* ECOSplitView.m */; };
+		6980EED322F2C6EE008D9832 /* ECOTemplateOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6980EED022F2C6EE008D9832 /* ECOTemplateOutlineViewController.m */; };
+		6980EED422F2C6EE008D9832 /* ECOTemplateOutlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6980EED122F2C6EE008D9832 /* ECOTemplateOutlineViewController.xib */; };
+		6986F88822F846250090A11A /* ECONoTriangleOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6986F88722F846250090A11A /* ECONoTriangleOutlineView.m */; };
+		69895FA822F181C8003F1416 /* ECOTemplateListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69895FA322F181C7003F1416 /* ECOTemplateListDetailViewController.m */; };
+		69895FA922F181C8003F1416 /* ECOTemplateTableHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 69895FA522F181C8003F1416 /* ECOTemplateTableHeaderCell.m */; };
+		69895FAA22F181C8003F1416 /* ECOTemplateListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69895FA722F181C8003F1416 /* ECOTemplateListDetailViewController.xib */; };
+		6990BCE52277ECBE00EC5597 /* ECOPluginTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6990BCE42277ECBE00EC5597 /* ECOPluginTableCellView.m */; };
+		6990BCE92277FF4B00EC5597 /* ECOCustomWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AC7F3D227704E900AC1518 /* ECOCustomWindowController.m */; };
+		6990BCEC2278212A00EC5597 /* ECOPluginItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6990BCEB2278212A00EC5597 /* ECOPluginItemsViewController.m */; };
+		6991EFFF22E7349100AE7D28 /* ECOViewHierarchyContentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7022E7349000AE7D28 /* ECOViewHierarchyContentViewController.storyboard */; };
+		6991F00022E7349100AE7D28 /* ECOSelectableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF7322E7349000AE7D28 /* ECOSelectableTextView.m */; };
+		6991F00122E7349100AE7D28 /* ECOViewHierarchyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF7622E7349000AE7D28 /* ECOViewHierarchyViewController.m */; };
+		6991F00222E7349100AE7D28 /* ECOViewHierarchyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7822E7349000AE7D28 /* ECOViewHierarchyViewController.xib */; };
+		6991F00322E7349100AE7D28 /* ECOViewHierarchyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF7922E7349000AE7D28 /* ECOViewHierarchyListViewController.m */; };
+		6991F00422E7349100AE7D28 /* left_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7B22E7349000AE7D28 /* left_blue.png */; };
+		6991F00522E7349100AE7D28 /* right_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7C22E7349000AE7D28 /* right_blue.png */; };
+		6991F00622E7349100AE7D28 /* right_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7D22E7349000AE7D28 /* right_gray.png */; };
+		6991F00722E7349100AE7D28 /* left_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7E22E7349000AE7D28 /* left_gray.png */; };
+		6991F00822E7349100AE7D28 /* empty.scn in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF7F22E7349000AE7D28 /* empty.scn */; };
+		6991F00922E7349100AE7D28 /* cellimage_view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF8022E7349000AE7D28 /* cellimage_view@2x.png */; };
+		6991F00A22E7349100AE7D28 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF8122E7349000AE7D28 /* refresh.png */; };
+		6991F00C22E7349100AE7D28 /* YVRightCellViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF8522E7349000AE7D28 /* YVRightCellViewFrame.m */; };
+		6991F00D22E7349100AE7D28 /* YVRightCellViewFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF8622E7349000AE7D28 /* YVRightCellViewFrame.xib */; };
+		6991F00E22E7349100AE7D28 /* YVRightCellViewInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6991EF8822E7349000AE7D28 /* YVRightCellViewInfo.xib */; };
+		6991F00F22E7349100AE7D28 /* YVRightCellViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF8922E7349000AE7D28 /* YVRightCellViewInfo.m */; };
+		6991F01022E7349100AE7D28 /* YVRightCellBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF8B22E7349000AE7D28 /* YVRightCellBase.m */; };
+		6991F01122E7349100AE7D28 /* ECOViewHierarchyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF8C22E7349000AE7D28 /* ECOViewHierarchyInfoViewController.m */; };
+		6991F01222E7349100AE7D28 /* ECOViewHierarchySceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF8E22E7349000AE7D28 /* ECOViewHierarchySceneViewController.m */; };
+		6991F01322E7349100AE7D28 /* ECOSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF8F22E7349000AE7D28 /* ECOSceneView.m */; };
+		6991F01422E7349100AE7D28 /* SCNNode+YVPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9222E7349000AE7D28 /* SCNNode+YVPlane.m */; };
+		6991F01522E7349100AE7D28 /* YVCGRectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9322E7349000AE7D28 /* YVCGRectHelper.m */; };
+		6991F01622E7349100AE7D28 /* SCNNode+YVSelected.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9522E7349000AE7D28 /* SCNNode+YVSelected.m */; };
+		6991F01722E7349100AE7D28 /* SCNNode+YVZindex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9622E7349000AE7D28 /* SCNNode+YVZindex.m */; };
+		6991F01822E7349100AE7D28 /* SCNNode+YVVisual.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9722E7349000AE7D28 /* SCNNode+YVVisual.m */; };
+		6991F01922E7349100AE7D28 /* SCNNode+YVIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9B22E7349000AE7D28 /* SCNNode+YVIdentifier.m */; };
+		6991F01A22E7349100AE7D28 /* SCNNode+YVBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EF9D22E7349000AE7D28 /* SCNNode+YVBorder.m */; };
+		6991F01B22E7349100AE7D28 /* TravseralContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFA122E7349000AE7D28 /* TravseralContext.m */; };
+		6991F01C22E7349100AE7D28 /* YVDisplayControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFA322E7349000AE7D28 /* YVDisplayControl.m */; };
+		6991F01D22E7349100AE7D28 /* YVNodeBackTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFA422E7349000AE7D28 /* YVNodeBackTracking.m */; };
+		6991F02F22E7349100AE7D28 /* ECONetworkDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6991EFCB22E7349000AE7D28 /* ECONetworkDetailViewController.storyboard */; };
+		6991F03022E7349100AE7D28 /* ECONetworkKeyValueListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFCD22E7349000AE7D28 /* ECONetworkKeyValueListViewController.m */; };
+		6991F03122E7349100AE7D28 /* ECONetworkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFCE22E7349000AE7D28 /* ECONetworkDetailViewController.m */; };
+		6991F03222E7349100AE7D28 /* ECONetworkJSONViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFD222E7349000AE7D28 /* ECONetworkJSONViewController.m */; };
+		6991F03322E7349100AE7D28 /* ECONetworkResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFD322E7349000AE7D28 /* ECONetworkResponseViewController.m */; };
+		6991F03422E7349100AE7D28 /* ECONetworkRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFD422E7349000AE7D28 /* ECONetworkRequestViewController.m */; };
+		6991F03522E7349100AE7D28 /* ECONetworkOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFD522E7349000AE7D28 /* ECONetworkOverviewViewController.m */; };
+		6991F03622E7349100AE7D28 /* ECONetworkScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFD622E7349000AE7D28 /* ECONetworkScrollTextViewController.m */; };
+		6991F03822E7349100AE7D28 /* ECONetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6991EFDA22E7349100AE7D28 /* ECONetworkViewController.m */; };
+		6991F03922E7349100AE7D28 /* ECONetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6991EFDC22E7349100AE7D28 /* ECONetworkViewController.xib */; };
+		6991F04722E7349100AE7D28 /* performance.md in Resources */ = {isa = PBXBuildFile; fileRef = 6991EFF922E7349100AE7D28 /* performance.md */; };
+		69A5EE02228BE9470093D253 /* ECODeviceTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A5EE01228BE9470093D253 /* ECODeviceTableCellView.m */; };
+		69A5EE13228C1A1C0093D253 /* ECODeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A5EE12228C1A1C0093D253 /* ECODeviceModel.m */; };
+		69A5EE16228C1A2D0093D253 /* ECOPluginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A5EE15228C1A2D0093D253 /* ECOPluginModel.m */; };
+		69AC7F412277050700AC1518 /* ECOSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AC7F402277050700AC1518 /* ECOSplitViewController.m */; };
+		69AC7F47227706C300AC1518 /* ECOPluginDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AC7F46227706C300AC1518 /* ECOPluginDetailViewController.m */; };
+		69B3B10B236FF77C00FE3879 /* ECOPluginItemsOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B3B10A236FF77C00FE3879 /* ECOPluginItemsOutlineView.m */; };
+		69C6241122F9279D00846B61 /* ECOTemplateH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C6240F22F9279D00846B61 /* ECOTemplateH5ViewController.m */; };
+		69C6241222F9279D00846B61 /* ECOTemplateH5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C6241022F9279D00846B61 /* ECOTemplateH5ViewController.xib */; };
+		69C6241722F92CCE00846B61 /* echoJS.js in Resources */ = {isa = PBXBuildFile; fileRef = 69C6241622F92CCE00846B61 /* echoJS.js */; };
+		69EB2EAC228A9A2B007E3D81 /* ECODevicesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EB2EAB228A9A2B007E3D81 /* ECODevicesListViewController.m */; };
+		D5B1B08C22F40CD0004B8D60 /* ECOOlNodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1B08B22F40CD0004B8D60 /* ECOOlNodeFactory.m */; };
+		D5B1B08E22F40CFD004B8D60 /* ECOOlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1B08D22F40CFD004B8D60 /* ECOOlNode.m */; };
+		D5C8C7EA22FBC21F00258F3D /* ECOString.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C8C7E822FBC21F00258F3D /* ECOString.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0186AF232C070B7FB1ED0D3C /* Pods-Echo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Echo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Echo/Pods-Echo.debug.xcconfig"; sourceTree = "<group>"; };
+		6931BE38238E8A0000C8203D /* ECODarkModeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECODarkModeHelper.m; sourceTree = "<group>"; };
+		6931BE39238E8A0000C8203D /* ECODarkModeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECODarkModeHelper.h; sourceTree = "<group>"; };
+		694C5550233A236000D61F45 /* ECODeviceConnectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECODeviceConnectView.h; sourceTree = "<group>"; };
+		694C5551233A236000D61F45 /* ECODeviceConnectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECODeviceConnectView.m; sourceTree = "<group>"; };
+		6950EC4822A6727E00CB9FC1 /* json-viewer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "json-viewer.js"; sourceTree = "<group>"; };
+		6950EC4922A6727E00CB9FC1 /* jsonviewer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsonviewer.html; sourceTree = "<group>"; };
+		6950EC4A22A6727E00CB9FC1 /* json-viewer-dark-theme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "json-viewer-dark-theme.css"; sourceTree = "<group>"; };
+		6950EC4B22A6727E00CB9FC1 /* json-viewer-light-theme.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "json-viewer-light-theme.css"; sourceTree = "<group>"; };
+		6950EC4C22A6727E00CB9FC1 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		6951ED132294EB3800E0EC9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		695CC1E82340506E002E9601 /* ECONetworkListTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECONetworkListTableCellView.h; sourceTree = "<group>"; };
+		695CC1E92340506E002E9601 /* ECONetworkListTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECONetworkListTableCellView.m; sourceTree = "<group>"; };
+		695E976B232F95E100544ACF /* ECOTemplateOutlineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOTemplateOutlineCell.h; sourceTree = "<group>"; };
+		695E976C232F95E100544ACF /* ECOTemplateOutlineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOTemplateOutlineCell.m; sourceTree = "<group>"; };
+		696E4D7C2264850D005C6A1F /* Echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		696E4D7F2264850D005C6A1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		696E4D802264850D005C6A1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		696E4D8822648510005C6A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		696E4D8A22648510005C6A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696E4D8B22648510005C6A1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6970106B2305078400FC8683 /* ECOTemplateListDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOTemplateListDetailCell.h; sourceTree = "<group>"; };
+		6970106C2305078400FC8683 /* ECOTemplateListDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOTemplateListDetailCell.m; sourceTree = "<group>"; };
+		69708507228CFED30075CFBA /* ECOPacketsDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOPacketsDispatcher.h; sourceTree = "<group>"; };
+		69708508228CFED30075CFBA /* ECOPacketsDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOPacketsDispatcher.m; sourceTree = "<group>"; };
+		6970850A228CFFAB0075CFBA /* ECODeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECODeviceModel.h; sourceTree = "<group>"; };
+		6970850B228D11A50075CFBA /* ECOProjectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOProjectModel.h; sourceTree = "<group>"; };
+		6970850C228D11A50075CFBA /* ECOProjectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOProjectModel.m; sourceTree = "<group>"; };
+		6974925C23151D390005E6BC /* YVRightCellViewClass.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YVRightCellViewClass.xib; sourceTree = "<group>"; };
+		6974925D23151D390005E6BC /* YVRightCellViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVRightCellViewClass.h; sourceTree = "<group>"; };
+		6974925E23151D390005E6BC /* YVRightCellViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVRightCellViewClass.m; sourceTree = "<group>"; };
+		697FBFBF230BF3E5006C209E /* ECOSplitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOSplitView.h; sourceTree = "<group>"; };
+		697FBFC0230BF3E5006C209E /* ECOSplitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOSplitView.m; sourceTree = "<group>"; };
+		6980EECE22F284BC008D9832 /* Echo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Echo.entitlements; sourceTree = "<group>"; };
+		6980EED022F2C6EE008D9832 /* ECOTemplateOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOTemplateOutlineViewController.m; sourceTree = "<group>"; };
+		6980EED122F2C6EE008D9832 /* ECOTemplateOutlineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECOTemplateOutlineViewController.xib; sourceTree = "<group>"; };
+		6980EED222F2C6EE008D9832 /* ECOTemplateOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOTemplateOutlineViewController.h; sourceTree = "<group>"; };
+		6986F88622F846250090A11A /* ECONoTriangleOutlineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECONoTriangleOutlineView.h; sourceTree = "<group>"; };
+		6986F88722F846250090A11A /* ECONoTriangleOutlineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECONoTriangleOutlineView.m; sourceTree = "<group>"; };
+		69895F9722F16A99003F1416 /* ECOUITemplateMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOUITemplateMapper.h; sourceTree = "<group>"; };
+		69895FA322F181C7003F1416 /* ECOTemplateListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOTemplateListDetailViewController.m; sourceTree = "<group>"; };
+		69895FA422F181C7003F1416 /* ECOTemplateTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOTemplateTableHeaderCell.h; sourceTree = "<group>"; };
+		69895FA522F181C8003F1416 /* ECOTemplateTableHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOTemplateTableHeaderCell.m; sourceTree = "<group>"; };
+		69895FA622F181C8003F1416 /* ECOTemplateListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOTemplateListDetailViewController.h; sourceTree = "<group>"; };
+		69895FA722F181C8003F1416 /* ECOTemplateListDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECOTemplateListDetailViewController.xib; sourceTree = "<group>"; };
+		6990BCE32277ECBE00EC5597 /* ECOPluginTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOPluginTableCellView.h; sourceTree = "<group>"; };
+		6990BCE42277ECBE00EC5597 /* ECOPluginTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOPluginTableCellView.m; sourceTree = "<group>"; };
+		6990BCEA2278212A00EC5597 /* ECOPluginItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOPluginItemsViewController.h; sourceTree = "<group>"; };
+		6990BCEB2278212A00EC5597 /* ECOPluginItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOPluginItemsViewController.m; sourceTree = "<group>"; };
+		6991EF7022E7349000AE7D28 /* ECOViewHierarchyContentViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ECOViewHierarchyContentViewController.storyboard; sourceTree = "<group>"; };
+		6991EF7122E7349000AE7D28 /* ECOViewHierarchyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOViewHierarchyListViewController.h; sourceTree = "<group>"; };
+		6991EF7222E7349000AE7D28 /* ECOViewHierarchyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOViewHierarchyInfoViewController.h; sourceTree = "<group>"; };
+		6991EF7322E7349000AE7D28 /* ECOSelectableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOSelectableTextView.m; sourceTree = "<group>"; };
+		6991EF7422E7349000AE7D28 /* ECOSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOSceneView.h; sourceTree = "<group>"; };
+		6991EF7522E7349000AE7D28 /* ECOViewHierarchySceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOViewHierarchySceneViewController.h; sourceTree = "<group>"; };
+		6991EF7622E7349000AE7D28 /* ECOViewHierarchyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOViewHierarchyViewController.m; sourceTree = "<group>"; };
+		6991EF7722E7349000AE7D28 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		6991EF7822E7349000AE7D28 /* ECOViewHierarchyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECOViewHierarchyViewController.xib; sourceTree = "<group>"; };
+		6991EF7922E7349000AE7D28 /* ECOViewHierarchyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOViewHierarchyListViewController.m; sourceTree = "<group>"; };
+		6991EF7B22E7349000AE7D28 /* left_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_blue.png; sourceTree = "<group>"; };
+		6991EF7C22E7349000AE7D28 /* right_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_blue.png; sourceTree = "<group>"; };
+		6991EF7D22E7349000AE7D28 /* right_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_gray.png; sourceTree = "<group>"; };
+		6991EF7E22E7349000AE7D28 /* left_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_gray.png; sourceTree = "<group>"; };
+		6991EF7F22E7349000AE7D28 /* empty.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = empty.scn; sourceTree = "<group>"; };
+		6991EF8022E7349000AE7D28 /* cellimage_view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellimage_view@2x.png"; sourceTree = "<group>"; };
+		6991EF8122E7349000AE7D28 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		6991EF8422E7349000AE7D28 /* YVRightCellViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVRightCellViewInfo.h; sourceTree = "<group>"; };
+		6991EF8522E7349000AE7D28 /* YVRightCellViewFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVRightCellViewFrame.m; sourceTree = "<group>"; };
+		6991EF8622E7349000AE7D28 /* YVRightCellViewFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YVRightCellViewFrame.xib; sourceTree = "<group>"; };
+		6991EF8722E7349000AE7D28 /* YVRightCellBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVRightCellBase.h; sourceTree = "<group>"; };
+		6991EF8822E7349000AE7D28 /* YVRightCellViewInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YVRightCellViewInfo.xib; sourceTree = "<group>"; };
+		6991EF8922E7349000AE7D28 /* YVRightCellViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVRightCellViewInfo.m; sourceTree = "<group>"; };
+		6991EF8A22E7349000AE7D28 /* YVRightCellViewFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVRightCellViewFrame.h; sourceTree = "<group>"; };
+		6991EF8B22E7349000AE7D28 /* YVRightCellBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVRightCellBase.m; sourceTree = "<group>"; };
+		6991EF8C22E7349000AE7D28 /* ECOViewHierarchyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOViewHierarchyInfoViewController.m; sourceTree = "<group>"; };
+		6991EF8D22E7349000AE7D28 /* ECOViewHierarchyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOViewHierarchyViewController.h; sourceTree = "<group>"; };
+		6991EF8E22E7349000AE7D28 /* ECOViewHierarchySceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOViewHierarchySceneViewController.m; sourceTree = "<group>"; };
+		6991EF8F22E7349000AE7D28 /* ECOSceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOSceneView.m; sourceTree = "<group>"; };
+		6991EF9022E7349000AE7D28 /* ECOSelectableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOSelectableTextView.h; sourceTree = "<group>"; };
+		6991EF9222E7349000AE7D28 /* SCNNode+YVPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+YVPlane.m"; sourceTree = "<group>"; };
+		6991EF9322E7349000AE7D28 /* YVCGRectHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVCGRectHelper.m; sourceTree = "<group>"; };
+		6991EF9422E7349000AE7D28 /* TravseralContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravseralContext.h; sourceTree = "<group>"; };
+		6991EF9522E7349000AE7D28 /* SCNNode+YVSelected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+YVSelected.m"; sourceTree = "<group>"; };
+		6991EF9622E7349000AE7D28 /* SCNNode+YVZindex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+YVZindex.m"; sourceTree = "<group>"; };
+		6991EF9722E7349000AE7D28 /* SCNNode+YVVisual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+YVVisual.m"; sourceTree = "<group>"; };
+		6991EF9822E7349000AE7D28 /* SCNNode+YVBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+YVBorder.h"; sourceTree = "<group>"; };
+		6991EF9922E7349000AE7D28 /* YVDisplayControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVDisplayControl.h; sourceTree = "<group>"; };
+		6991EF9A22E7349000AE7D28 /* YVNodeBackTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVNodeBackTracking.h; sourceTree = "<group>"; };
+		6991EF9B22E7349000AE7D28 /* SCNNode+YVIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+YVIdentifier.m"; sourceTree = "<group>"; };
+		6991EF9C22E7349000AE7D28 /* SCNNode+YVVisual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+YVVisual.h"; sourceTree = "<group>"; };
+		6991EF9D22E7349000AE7D28 /* SCNNode+YVBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCNNode+YVBorder.m"; sourceTree = "<group>"; };
+		6991EF9E22E7349000AE7D28 /* SCNNode+YVZIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+YVZIndex.h"; sourceTree = "<group>"; };
+		6991EF9F22E7349000AE7D28 /* SCNNode+YVSelected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+YVSelected.h"; sourceTree = "<group>"; };
+		6991EFA022E7349000AE7D28 /* YVCGRectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVCGRectHelper.h; sourceTree = "<group>"; };
+		6991EFA122E7349000AE7D28 /* TravseralContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravseralContext.m; sourceTree = "<group>"; };
+		6991EFA222E7349000AE7D28 /* SCNNode+YVPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+YVPlane.h"; sourceTree = "<group>"; };
+		6991EFA322E7349000AE7D28 /* YVDisplayControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVDisplayControl.m; sourceTree = "<group>"; };
+		6991EFA422E7349000AE7D28 /* YVNodeBackTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVNodeBackTracking.m; sourceTree = "<group>"; };
+		6991EFA522E7349000AE7D28 /* SCNNode+YVIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCNNode+YVIdentifier.h"; sourceTree = "<group>"; };
+		6991EFCA22E7349000AE7D28 /* ECONetworkOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkOverviewViewController.h; sourceTree = "<group>"; };
+		6991EFCB22E7349000AE7D28 /* ECONetworkDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ECONetworkDetailViewController.storyboard; sourceTree = "<group>"; };
+		6991EFCC22E7349000AE7D28 /* ECONetworkRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkRequestViewController.h; sourceTree = "<group>"; };
+		6991EFCD22E7349000AE7D28 /* ECONetworkKeyValueListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkKeyValueListViewController.m; sourceTree = "<group>"; };
+		6991EFCE22E7349000AE7D28 /* ECONetworkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkDetailViewController.m; sourceTree = "<group>"; };
+		6991EFD022E7349000AE7D28 /* ECONetworkScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkScrollTextViewController.h; sourceTree = "<group>"; };
+		6991EFD122E7349000AE7D28 /* ECONetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkViewController.h; sourceTree = "<group>"; };
+		6991EFD222E7349000AE7D28 /* ECONetworkJSONViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkJSONViewController.m; sourceTree = "<group>"; };
+		6991EFD322E7349000AE7D28 /* ECONetworkResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkResponseViewController.m; sourceTree = "<group>"; };
+		6991EFD422E7349000AE7D28 /* ECONetworkRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkRequestViewController.m; sourceTree = "<group>"; };
+		6991EFD522E7349000AE7D28 /* ECONetworkOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkOverviewViewController.m; sourceTree = "<group>"; };
+		6991EFD622E7349000AE7D28 /* ECONetworkScrollTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkScrollTextViewController.m; sourceTree = "<group>"; };
+		6991EFD822E7349100AE7D28 /* ECONetworkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkDetailViewController.h; sourceTree = "<group>"; };
+		6991EFD922E7349100AE7D28 /* ECONetworkKeyValueListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkKeyValueListViewController.h; sourceTree = "<group>"; };
+		6991EFDA22E7349100AE7D28 /* ECONetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECONetworkViewController.m; sourceTree = "<group>"; };
+		6991EFDB22E7349100AE7D28 /* ECONetworkResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkResponseViewController.h; sourceTree = "<group>"; };
+		6991EFDC22E7349100AE7D28 /* ECONetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECONetworkViewController.xib; sourceTree = "<group>"; };
+		6991EFDD22E7349100AE7D28 /* ECONetworkJSONViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECONetworkJSONViewController.h; sourceTree = "<group>"; };
+		6991EFF722E7349100AE7D28 /* ECOPluginUIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOPluginUIProtocol.h; sourceTree = "<group>"; };
+		6991EFF922E7349100AE7D28 /* performance.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = performance.md; sourceTree = "<group>"; };
+		69A5EE00228BE9470093D253 /* ECODeviceTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECODeviceTableCellView.h; sourceTree = "<group>"; };
+		69A5EE01228BE9470093D253 /* ECODeviceTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECODeviceTableCellView.m; sourceTree = "<group>"; };
+		69A5EE12228C1A1C0093D253 /* ECODeviceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECODeviceModel.m; sourceTree = "<group>"; };
+		69A5EE14228C1A2D0093D253 /* ECOPluginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOPluginModel.h; sourceTree = "<group>"; };
+		69A5EE15228C1A2D0093D253 /* ECOPluginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOPluginModel.m; sourceTree = "<group>"; };
+		69AC7F3C227704E900AC1518 /* ECOCustomWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOCustomWindowController.h; sourceTree = "<group>"; };
+		69AC7F3D227704E900AC1518 /* ECOCustomWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOCustomWindowController.m; sourceTree = "<group>"; };
+		69AC7F3F2277050700AC1518 /* ECOSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOSplitViewController.h; sourceTree = "<group>"; };
+		69AC7F402277050700AC1518 /* ECOSplitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOSplitViewController.m; sourceTree = "<group>"; };
+		69AC7F45227706C300AC1518 /* ECOPluginDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOPluginDetailViewController.h; sourceTree = "<group>"; };
+		69AC7F46227706C300AC1518 /* ECOPluginDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOPluginDetailViewController.m; sourceTree = "<group>"; };
+		69B3B109236FF77C00FE3879 /* ECOPluginItemsOutlineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOPluginItemsOutlineView.h; sourceTree = "<group>"; };
+		69B3B10A236FF77C00FE3879 /* ECOPluginItemsOutlineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOPluginItemsOutlineView.m; sourceTree = "<group>"; };
+		69C6240E22F9279D00846B61 /* ECOTemplateH5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOTemplateH5ViewController.h; sourceTree = "<group>"; };
+		69C6240F22F9279D00846B61 /* ECOTemplateH5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOTemplateH5ViewController.m; sourceTree = "<group>"; };
+		69C6241022F9279D00846B61 /* ECOTemplateH5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECOTemplateH5ViewController.xib; sourceTree = "<group>"; };
+		69C6241622F92CCE00846B61 /* echoJS.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = echoJS.js; sourceTree = "<group>"; };
+		69EB2EAA228A9A2B007E3D81 /* ECODevicesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECODevicesListViewController.h; sourceTree = "<group>"; };
+		69EB2EAB228A9A2B007E3D81 /* ECODevicesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECODevicesListViewController.m; sourceTree = "<group>"; };
+		D5B1B08722F3E758004B8D60 /* ECOOlNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOOlNode.h; sourceTree = "<group>"; };
+		D5B1B08A22F40CD0004B8D60 /* ECOOlNodeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECOOlNodeFactory.h; sourceTree = "<group>"; };
+		D5B1B08B22F40CD0004B8D60 /* ECOOlNodeFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECOOlNodeFactory.m; sourceTree = "<group>"; };
+		D5B1B08D22F40CFD004B8D60 /* ECOOlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOOlNode.m; sourceTree = "<group>"; };
+		D5C8C7E822FBC21F00258F3D /* ECOString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECOString.m; sourceTree = "<group>"; };
+		D5C8C7E922FBC21F00258F3D /* ECOString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECOString.h; sourceTree = "<group>"; };
+		D99B640572F55C82693F1351 /* libPods-Echo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Echo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB08AC33675279D4FFFAD47F /* Pods-Echo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Echo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Echo/Pods-Echo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		696E4D792264850D005C6A1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11F912CCAC49A64B38E2A9D9 /* libPods-Echo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6913A676227EC4E300D6C0BA /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6931BE37238E8A0000C8203D /* DarkMode */,
+				69895F9522F16A84003F1416 /* Template */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6931BE37238E8A0000C8203D /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				6931BE39238E8A0000C8203D /* ECODarkModeHelper.h */,
+				6931BE38238E8A0000C8203D /* ECODarkModeHelper.m */,
+			);
+			path = DarkMode;
+			sourceTree = "<group>";
+		};
+		6950EC4722A6727E00CB9FC1 /* jsonViewer */ = {
+			isa = PBXGroup;
+			children = (
+				6950EC4822A6727E00CB9FC1 /* json-viewer.js */,
+				6950EC4922A6727E00CB9FC1 /* jsonviewer.html */,
+				6950EC4A22A6727E00CB9FC1 /* json-viewer-dark-theme.css */,
+				6950EC4B22A6727E00CB9FC1 /* json-viewer-light-theme.css */,
+				6950EC4C22A6727E00CB9FC1 /* jquery.js */,
+			);
+			path = jsonViewer;
+			sourceTree = "<group>";
+		};
+		696E4D732264850D005C6A1F = {
+			isa = PBXGroup;
+			children = (
+				696E4D7E2264850D005C6A1F /* Echo */,
+				696E4D7D2264850D005C6A1F /* Products */,
+				E9ECFAC202D915C14E5AB97E /* Pods */,
+				E9A6DE8DDEE44AA784FBADF4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		696E4D7D2264850D005C6A1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				696E4D7C2264850D005C6A1F /* Echo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		696E4D7E2264850D005C6A1F /* Echo */ = {
+			isa = PBXGroup;
+			children = (
+				6980EECE22F284BC008D9832 /* Echo.entitlements */,
+				696E4D7F2264850D005C6A1F /* AppDelegate.h */,
+				696E4D802264850D005C6A1F /* AppDelegate.m */,
+				69895F9822F1817B003F1416 /* Template */,
+				6991EF6322E7349000AE7D28 /* Plugins */,
+				6950EC4722A6727E00CB9FC1 /* jsonViewer */,
+				69A5EE10228C15770093D253 /* Models */,
+				6913A676227EC4E300D6C0BA /* Tools */,
+				69AC7F3B2277032C00AC1518 /* UI */,
+				696E4D8722648510005C6A1F /* Main.storyboard */,
+				696E4D8A22648510005C6A1F /* Info.plist */,
+				6951ED132294EB3800E0EC9D /* Assets.xcassets */,
+				696E4D8B22648510005C6A1F /* main.m */,
+			);
+			path = Echo;
+			sourceTree = "<group>";
+		};
+		6980EECF22F2C6B2008D9832 /* Outline */ = {
+			isa = PBXGroup;
+			children = (
+				D5C8C7E922FBC21F00258F3D /* ECOString.h */,
+				D5C8C7E822FBC21F00258F3D /* ECOString.m */,
+				D5B1B08722F3E758004B8D60 /* ECOOlNode.h */,
+				D5B1B08D22F40CFD004B8D60 /* ECOOlNode.m */,
+				D5B1B08A22F40CD0004B8D60 /* ECOOlNodeFactory.h */,
+				D5B1B08B22F40CD0004B8D60 /* ECOOlNodeFactory.m */,
+				695E976B232F95E100544ACF /* ECOTemplateOutlineCell.h */,
+				695E976C232F95E100544ACF /* ECOTemplateOutlineCell.m */,
+				6980EED222F2C6EE008D9832 /* ECOTemplateOutlineViewController.h */,
+				6980EED022F2C6EE008D9832 /* ECOTemplateOutlineViewController.m */,
+				6980EED122F2C6EE008D9832 /* ECOTemplateOutlineViewController.xib */,
+			);
+			path = Outline;
+			sourceTree = "<group>";
+		};
+		69895F9522F16A84003F1416 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				69895F9722F16A99003F1416 /* ECOUITemplateMapper.h */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		69895F9822F1817B003F1416 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				6980EECF22F2C6B2008D9832 /* Outline */,
+				69895F9922F1817B003F1416 /* H5 */,
+				69895F9A22F1817B003F1416 /* List */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		69895F9922F1817B003F1416 /* H5 */ = {
+			isa = PBXGroup;
+			children = (
+				69C6240E22F9279D00846B61 /* ECOTemplateH5ViewController.h */,
+				69C6240F22F9279D00846B61 /* ECOTemplateH5ViewController.m */,
+				69C6241022F9279D00846B61 /* ECOTemplateH5ViewController.xib */,
+				69C6241622F92CCE00846B61 /* echoJS.js */,
+			);
+			path = H5;
+			sourceTree = "<group>";
+		};
+		69895F9A22F1817B003F1416 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				69895FA622F181C8003F1416 /* ECOTemplateListDetailViewController.h */,
+				69895FA322F181C7003F1416 /* ECOTemplateListDetailViewController.m */,
+				69895FA722F181C8003F1416 /* ECOTemplateListDetailViewController.xib */,
+				6970106B2305078400FC8683 /* ECOTemplateListDetailCell.h */,
+				6970106C2305078400FC8683 /* ECOTemplateListDetailCell.m */,
+				69895FA422F181C7003F1416 /* ECOTemplateTableHeaderCell.h */,
+				69895FA522F181C8003F1416 /* ECOTemplateTableHeaderCell.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		6991EF6322E7349000AE7D28 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				6991EFC822E7349000AE7D28 /* Basic */,
+				6991EFF722E7349100AE7D28 /* ECOPluginUIProtocol.h */,
+				6991EFF822E7349100AE7D28 /* Performance */,
+				6991EF6422E7349000AE7D28 /* UI */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		6991EF6422E7349000AE7D28 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6991EF6E22E7349000AE7D28 /* ViewHierarchy */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6991EF6E22E7349000AE7D28 /* ViewHierarchy */ = {
+			isa = PBXGroup;
+			children = (
+				6991EF8322E7349000AE7D28 /* cell */,
+				6991EF7422E7349000AE7D28 /* ECOSceneView.h */,
+				6991EF8F22E7349000AE7D28 /* ECOSceneView.m */,
+				6991EF9022E7349000AE7D28 /* ECOSelectableTextView.h */,
+				6991EF7322E7349000AE7D28 /* ECOSelectableTextView.m */,
+				6991EF7022E7349000AE7D28 /* ECOViewHierarchyContentViewController.storyboard */,
+				6991EF7222E7349000AE7D28 /* ECOViewHierarchyInfoViewController.h */,
+				6991EF8C22E7349000AE7D28 /* ECOViewHierarchyInfoViewController.m */,
+				6991EF7122E7349000AE7D28 /* ECOViewHierarchyListViewController.h */,
+				6991EF7922E7349000AE7D28 /* ECOViewHierarchyListViewController.m */,
+				6991EF7522E7349000AE7D28 /* ECOViewHierarchySceneViewController.h */,
+				6991EF8E22E7349000AE7D28 /* ECOViewHierarchySceneViewController.m */,
+				6991EF8D22E7349000AE7D28 /* ECOViewHierarchyViewController.h */,
+				6991EF7622E7349000AE7D28 /* ECOViewHierarchyViewController.m */,
+				6991EF7822E7349000AE7D28 /* ECOViewHierarchyViewController.xib */,
+				6991EF7722E7349000AE7D28 /* defines.h */,
+				6991EF9122E7349000AE7D28 /* helper */,
+				6991EF7A22E7349000AE7D28 /* img */,
+			);
+			path = ViewHierarchy;
+			sourceTree = "<group>";
+		};
+		6991EF7A22E7349000AE7D28 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				6991EF7B22E7349000AE7D28 /* left_blue.png */,
+				6991EF7C22E7349000AE7D28 /* right_blue.png */,
+				6991EF7D22E7349000AE7D28 /* right_gray.png */,
+				6991EF7E22E7349000AE7D28 /* left_gray.png */,
+				6991EF7F22E7349000AE7D28 /* empty.scn */,
+				6991EF8022E7349000AE7D28 /* cellimage_view@2x.png */,
+				6991EF8122E7349000AE7D28 /* refresh.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		6991EF8322E7349000AE7D28 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				6991EF8722E7349000AE7D28 /* YVRightCellBase.h */,
+				6991EF8B22E7349000AE7D28 /* YVRightCellBase.m */,
+				6974925D23151D390005E6BC /* YVRightCellViewClass.h */,
+				6974925E23151D390005E6BC /* YVRightCellViewClass.m */,
+				6974925C23151D390005E6BC /* YVRightCellViewClass.xib */,
+				6991EF8A22E7349000AE7D28 /* YVRightCellViewFrame.h */,
+				6991EF8522E7349000AE7D28 /* YVRightCellViewFrame.m */,
+				6991EF8622E7349000AE7D28 /* YVRightCellViewFrame.xib */,
+				6991EF8422E7349000AE7D28 /* YVRightCellViewInfo.h */,
+				6991EF8922E7349000AE7D28 /* YVRightCellViewInfo.m */,
+				6991EF8822E7349000AE7D28 /* YVRightCellViewInfo.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		6991EF9122E7349000AE7D28 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				6991EF9822E7349000AE7D28 /* SCNNode+YVBorder.h */,
+				6991EF9D22E7349000AE7D28 /* SCNNode+YVBorder.m */,
+				6991EFA522E7349000AE7D28 /* SCNNode+YVIdentifier.h */,
+				6991EF9B22E7349000AE7D28 /* SCNNode+YVIdentifier.m */,
+				6991EFA222E7349000AE7D28 /* SCNNode+YVPlane.h */,
+				6991EF9222E7349000AE7D28 /* SCNNode+YVPlane.m */,
+				6991EF9F22E7349000AE7D28 /* SCNNode+YVSelected.h */,
+				6991EF9522E7349000AE7D28 /* SCNNode+YVSelected.m */,
+				6991EF9C22E7349000AE7D28 /* SCNNode+YVVisual.h */,
+				6991EF9722E7349000AE7D28 /* SCNNode+YVVisual.m */,
+				6991EF9E22E7349000AE7D28 /* SCNNode+YVZIndex.h */,
+				6991EF9622E7349000AE7D28 /* SCNNode+YVZindex.m */,
+				6991EF9422E7349000AE7D28 /* TravseralContext.h */,
+				6991EFA122E7349000AE7D28 /* TravseralContext.m */,
+				6991EFA022E7349000AE7D28 /* YVCGRectHelper.h */,
+				6991EF9322E7349000AE7D28 /* YVCGRectHelper.m */,
+				6991EF9922E7349000AE7D28 /* YVDisplayControl.h */,
+				6991EFA322E7349000AE7D28 /* YVDisplayControl.m */,
+				6991EF9A22E7349000AE7D28 /* YVNodeBackTracking.h */,
+				6991EFA422E7349000AE7D28 /* YVNodeBackTracking.m */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		6991EFC822E7349000AE7D28 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				6991EFC922E7349000AE7D28 /* Network */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		6991EFC922E7349000AE7D28 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6991EFD822E7349100AE7D28 /* ECONetworkDetailViewController.h */,
+				6991EFCE22E7349000AE7D28 /* ECONetworkDetailViewController.m */,
+				6991EFCB22E7349000AE7D28 /* ECONetworkDetailViewController.storyboard */,
+				6991EFDD22E7349100AE7D28 /* ECONetworkJSONViewController.h */,
+				6991EFD222E7349000AE7D28 /* ECONetworkJSONViewController.m */,
+				6991EFD922E7349100AE7D28 /* ECONetworkKeyValueListViewController.h */,
+				6991EFCD22E7349000AE7D28 /* ECONetworkKeyValueListViewController.m */,
+				6991EFCA22E7349000AE7D28 /* ECONetworkOverviewViewController.h */,
+				6991EFD522E7349000AE7D28 /* ECONetworkOverviewViewController.m */,
+				6991EFCC22E7349000AE7D28 /* ECONetworkRequestViewController.h */,
+				6991EFD422E7349000AE7D28 /* ECONetworkRequestViewController.m */,
+				6991EFDB22E7349100AE7D28 /* ECONetworkResponseViewController.h */,
+				6991EFD322E7349000AE7D28 /* ECONetworkResponseViewController.m */,
+				6991EFD022E7349000AE7D28 /* ECONetworkScrollTextViewController.h */,
+				6991EFD622E7349000AE7D28 /* ECONetworkScrollTextViewController.m */,
+				695CC1E82340506E002E9601 /* ECONetworkListTableCellView.h */,
+				695CC1E92340506E002E9601 /* ECONetworkListTableCellView.m */,
+				6991EFD122E7349000AE7D28 /* ECONetworkViewController.h */,
+				6991EFDA22E7349100AE7D28 /* ECONetworkViewController.m */,
+				6991EFDC22E7349100AE7D28 /* ECONetworkViewController.xib */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6991EFF822E7349100AE7D28 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				6991EFF922E7349100AE7D28 /* performance.md */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
+		69A5EE10228C15770093D253 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6970850A228CFFAB0075CFBA /* ECODeviceModel.h */,
+				69A5EE12228C1A1C0093D253 /* ECODeviceModel.m */,
+				6970850B228D11A50075CFBA /* ECOProjectModel.h */,
+				6970850C228D11A50075CFBA /* ECOProjectModel.m */,
+				69A5EE14228C1A2D0093D253 /* ECOPluginModel.h */,
+				69A5EE15228C1A2D0093D253 /* ECOPluginModel.m */,
+				69708507228CFED30075CFBA /* ECOPacketsDispatcher.h */,
+				69708508228CFED30075CFBA /* ECOPacketsDispatcher.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69AC7F3B2277032C00AC1518 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				69AC7F3C227704E900AC1518 /* ECOCustomWindowController.h */,
+				69AC7F3D227704E900AC1518 /* ECOCustomWindowController.m */,
+				69EB2EAA228A9A2B007E3D81 /* ECODevicesListViewController.h */,
+				69EB2EAB228A9A2B007E3D81 /* ECODevicesListViewController.m */,
+				6986F88622F846250090A11A /* ECONoTriangleOutlineView.h */,
+				6986F88722F846250090A11A /* ECONoTriangleOutlineView.m */,
+				69A5EE00228BE9470093D253 /* ECODeviceTableCellView.h */,
+				69A5EE01228BE9470093D253 /* ECODeviceTableCellView.m */,
+				6990BCEA2278212A00EC5597 /* ECOPluginItemsViewController.h */,
+				6990BCEB2278212A00EC5597 /* ECOPluginItemsViewController.m */,
+				69B3B109236FF77C00FE3879 /* ECOPluginItemsOutlineView.h */,
+				69B3B10A236FF77C00FE3879 /* ECOPluginItemsOutlineView.m */,
+				69AC7F45227706C300AC1518 /* ECOPluginDetailViewController.h */,
+				69AC7F46227706C300AC1518 /* ECOPluginDetailViewController.m */,
+				694C5550233A236000D61F45 /* ECODeviceConnectView.h */,
+				694C5551233A236000D61F45 /* ECODeviceConnectView.m */,
+				6990BCE32277ECBE00EC5597 /* ECOPluginTableCellView.h */,
+				6990BCE42277ECBE00EC5597 /* ECOPluginTableCellView.m */,
+				69AC7F3F2277050700AC1518 /* ECOSplitViewController.h */,
+				69AC7F402277050700AC1518 /* ECOSplitViewController.m */,
+				697FBFBF230BF3E5006C209E /* ECOSplitView.h */,
+				697FBFC0230BF3E5006C209E /* ECOSplitView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E9A6DE8DDEE44AA784FBADF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D99B640572F55C82693F1351 /* libPods-Echo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9ECFAC202D915C14E5AB97E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0186AF232C070B7FB1ED0D3C /* Pods-Echo.debug.xcconfig */,
+				FB08AC33675279D4FFFAD47F /* Pods-Echo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		696E4D7B2264850D005C6A1F /* Echo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 696E4D9022648510005C6A1F /* Build configuration list for PBXNativeTarget "Echo" */;
+			buildPhases = (
+				9B0EC1C061D0C068634D068D /* [CP] Check Pods Manifest.lock */,
+				696E4D782264850D005C6A1F /* Sources */,
+				696E4D792264850D005C6A1F /* Frameworks */,
+				696E4D7A2264850D005C6A1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Echo;
+			productName = DCMacDevTool;
+			productReference = 696E4D7C2264850D005C6A1F /* Echo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		696E4D742264850D005C6A1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "陈爱彬";
+				TargetAttributes = {
+					696E4D7B2264850D005C6A1F = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 696E4D772264850D005C6A1F /* Build configuration list for PBXProject "Echo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 696E4D732264850D005C6A1F;
+			productRefGroup = 696E4D7D2264850D005C6A1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				696E4D7B2264850D005C6A1F /* Echo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		696E4D7A2264850D005C6A1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69895FAA22F181C8003F1416 /* ECOTemplateListDetailViewController.xib in Resources */,
+				6991F00422E7349100AE7D28 /* left_blue.png in Resources */,
+				6991F00622E7349100AE7D28 /* right_gray.png in Resources */,
+				6950EC5122A6727E00CB9FC1 /* jquery.js in Resources */,
+				6991F02F22E7349100AE7D28 /* ECONetworkDetailViewController.storyboard in Resources */,
+				6991F04722E7349100AE7D28 /* performance.md in Resources */,
+				6950EC5022A6727E00CB9FC1 /* json-viewer-light-theme.css in Resources */,
+				6974925F23151D390005E6BC /* YVRightCellViewClass.xib in Resources */,
+				6991F00722E7349100AE7D28 /* left_gray.png in Resources */,
+				69C6241222F9279D00846B61 /* ECOTemplateH5ViewController.xib in Resources */,
+				6991F00522E7349100AE7D28 /* right_blue.png in Resources */,
+				6991F00A22E7349100AE7D28 /* refresh.png in Resources */,
+				6991F00E22E7349100AE7D28 /* YVRightCellViewInfo.xib in Resources */,
+				6991EFFF22E7349100AE7D28 /* ECOViewHierarchyContentViewController.storyboard in Resources */,
+				6950EC4E22A6727E00CB9FC1 /* jsonviewer.html in Resources */,
+				6950EC4F22A6727E00CB9FC1 /* json-viewer-dark-theme.css in Resources */,
+				6950EC4D22A6727E00CB9FC1 /* json-viewer.js in Resources */,
+				69C6241722F92CCE00846B61 /* echoJS.js in Resources */,
+				6951ED142294EB3800E0EC9D /* Assets.xcassets in Resources */,
+				6980EED422F2C6EE008D9832 /* ECOTemplateOutlineViewController.xib in Resources */,
+				6991F00822E7349100AE7D28 /* empty.scn in Resources */,
+				6991F00D22E7349100AE7D28 /* YVRightCellViewFrame.xib in Resources */,
+				6991F00922E7349100AE7D28 /* cellimage_view@2x.png in Resources */,
+				6991F03922E7349100AE7D28 /* ECONetworkViewController.xib in Resources */,
+				6991F00222E7349100AE7D28 /* ECOViewHierarchyViewController.xib in Resources */,
+				696E4D8922648510005C6A1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B0EC1C061D0C068634D068D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Echo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		696E4D782264850D005C6A1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69895FA922F181C8003F1416 /* ECOTemplateTableHeaderCell.m in Sources */,
+				6991F01422E7349100AE7D28 /* SCNNode+YVPlane.m in Sources */,
+				6991F01322E7349100AE7D28 /* ECOSceneView.m in Sources */,
+				6991F00022E7349100AE7D28 /* ECOSelectableTextView.m in Sources */,
+				6986F88822F846250090A11A /* ECONoTriangleOutlineView.m in Sources */,
+				6991F03122E7349100AE7D28 /* ECONetworkDetailViewController.m in Sources */,
+				6970106D2305078400FC8683 /* ECOTemplateListDetailCell.m in Sources */,
+				6991F01522E7349100AE7D28 /* YVCGRectHelper.m in Sources */,
+				6991F00322E7349100AE7D28 /* ECOViewHierarchyListViewController.m in Sources */,
+				6931BE3A238E8A0000C8203D /* ECODarkModeHelper.m in Sources */,
+				6991F03322E7349100AE7D28 /* ECONetworkResponseViewController.m in Sources */,
+				695E976D232F95E100544ACF /* ECOTemplateOutlineCell.m in Sources */,
+				69C6241122F9279D00846B61 /* ECOTemplateH5ViewController.m in Sources */,
+				697FBFC1230BF3E5006C209E /* ECOSplitView.m in Sources */,
+				69A5EE13228C1A1C0093D253 /* ECODeviceModel.m in Sources */,
+				6990BCE52277ECBE00EC5597 /* ECOPluginTableCellView.m in Sources */,
+				6990BCEC2278212A00EC5597 /* ECOPluginItemsViewController.m in Sources */,
+				696E4D8C22648510005C6A1F /* main.m in Sources */,
+				69AC7F412277050700AC1518 /* ECOSplitViewController.m in Sources */,
+				6974926023151D390005E6BC /* YVRightCellViewClass.m in Sources */,
+				6991F03822E7349100AE7D28 /* ECONetworkViewController.m in Sources */,
+				6991F03022E7349100AE7D28 /* ECONetworkKeyValueListViewController.m in Sources */,
+				69895FA822F181C8003F1416 /* ECOTemplateListDetailViewController.m in Sources */,
+				6991F00122E7349100AE7D28 /* ECOViewHierarchyViewController.m in Sources */,
+				6991F01022E7349100AE7D28 /* YVRightCellBase.m in Sources */,
+				6991F01222E7349100AE7D28 /* ECOViewHierarchySceneViewController.m in Sources */,
+				69B3B10B236FF77C00FE3879 /* ECOPluginItemsOutlineView.m in Sources */,
+				6991F01122E7349100AE7D28 /* ECOViewHierarchyInfoViewController.m in Sources */,
+				695CC1EA2340506E002E9601 /* ECONetworkListTableCellView.m in Sources */,
+				696E4D812264850D005C6A1F /* AppDelegate.m in Sources */,
+				6991F01A22E7349100AE7D28 /* SCNNode+YVBorder.m in Sources */,
+				6991F01B22E7349100AE7D28 /* TravseralContext.m in Sources */,
+				6990BCE92277FF4B00EC5597 /* ECOCustomWindowController.m in Sources */,
+				6991F03522E7349100AE7D28 /* ECONetworkOverviewViewController.m in Sources */,
+				69AC7F47227706C300AC1518 /* ECOPluginDetailViewController.m in Sources */,
+				6991F03422E7349100AE7D28 /* ECONetworkRequestViewController.m in Sources */,
+				D5B1B08C22F40CD0004B8D60 /* ECOOlNodeFactory.m in Sources */,
+				6991F03622E7349100AE7D28 /* ECONetworkScrollTextViewController.m in Sources */,
+				6991F01922E7349100AE7D28 /* SCNNode+YVIdentifier.m in Sources */,
+				69708509228CFED30075CFBA /* ECOPacketsDispatcher.m in Sources */,
+				69A5EE16228C1A2D0093D253 /* ECOPluginModel.m in Sources */,
+				D5C8C7EA22FBC21F00258F3D /* ECOString.m in Sources */,
+				6991F01D22E7349100AE7D28 /* YVNodeBackTracking.m in Sources */,
+				6991F00F22E7349100AE7D28 /* YVRightCellViewInfo.m in Sources */,
+				6991F01822E7349100AE7D28 /* SCNNode+YVVisual.m in Sources */,
+				69A5EE02228BE9470093D253 /* ECODeviceTableCellView.m in Sources */,
+				69EB2EAC228A9A2B007E3D81 /* ECODevicesListViewController.m in Sources */,
+				694C5552233A236000D61F45 /* ECODeviceConnectView.m in Sources */,
+				6991F01622E7349100AE7D28 /* SCNNode+YVSelected.m in Sources */,
+				6980EED322F2C6EE008D9832 /* ECOTemplateOutlineViewController.m in Sources */,
+				6991F00C22E7349100AE7D28 /* YVRightCellViewFrame.m in Sources */,
+				6991F01C22E7349100AE7D28 /* YVDisplayControl.m in Sources */,
+				6991F03222E7349100AE7D28 /* ECONetworkJSONViewController.m in Sources */,
+				6970850D228D11A50075CFBA /* ECOProjectModel.m in Sources */,
+				D5B1B08E22F40CFD004B8D60 /* ECOOlNode.m in Sources */,
+				6991F01722E7349100AE7D28 /* SCNNode+YVZindex.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		696E4D8722648510005C6A1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				696E4D8822648510005C6A1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		696E4D8E22648510005C6A1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		696E4D8F22648510005C6A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		696E4D9122648510005C6A1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0186AF232C070B7FB1ED0D3C /* Pods-Echo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Echo/Echo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Echo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.echo.desktop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		696E4D9222648510005C6A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB08AC33675279D4FFFAD47F /* Pods-Echo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Echo/Echo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Echo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.echo.desktop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		696E4D772264850D005C6A1F /* Build configuration list for PBXProject "Echo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696E4D8E22648510005C6A1F /* Debug */,
+				696E4D8F22648510005C6A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		696E4D9022648510005C6A1F /* Build configuration list for PBXNativeTarget "Echo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696E4D9122648510005C6A1F /* Debug */,
+				696E4D9222648510005C6A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 696E4D742264850D005C6A1F /* Project object */;
+}
