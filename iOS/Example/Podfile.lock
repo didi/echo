@@ -106,7 +106,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BSBacktraceLogger: 06b983ee93a9f87d957960e9c73d660d5966b447
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  EchoSDK: bec826d285ff6ef30ca5e2fd517602410871d8fa
+  EchoSDK: 81d39937718db7b95e3835e71d02b5a222b20ede
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YVTraversalStepin.h"
 #import "YVTraversalContext.h"
-#import "UIView+YVNodeInfo.m"
+#import "UIView+YVNodeInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

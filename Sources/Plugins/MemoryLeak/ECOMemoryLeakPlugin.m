@@ -51,7 +51,7 @@
        [sendData setValue:tmpDictM forKey:@"list"];
        //添加详细内容
        NSMutableString *contentString = [NSMutableString string];
-       [contentString appendString:@"MLeaksFinder 检查到内存泄漏:\n\n"];
+       [contentString appendString:@"检查到内存泄漏:\n\n"];
        [contentString appendFormat:@"time: %@\nLeaked view stack：\n%@\nRetain cycle: \n%@\n",
                             logDict[@"time"] ?: @"",
                             logDict[@"message"] ?: @"\n",

@@ -1,11 +1,12 @@
 //
-//  MLeaksMessenger+Echo.m
-//  Echo
+//  ECOMLeaksMessenger.m
+//  EchoSDK
 //
-//  Created by yxj on 2019/7/31.
+//  Created by 陈爱彬 on 2020/1/7. Maintain by 陈爱彬
+//  Description 
 //
 
-#import "MLeaksMessenger+Echo.h"
+#import "ECOMLeaksMessenger.h"
 #import "MLeakedObjectProxy.h"
 #import "ECOMemoryLeakManager.h"
 #if __has_include(<RSSwizzle/RSSwizzle.h>)
@@ -14,12 +15,11 @@
 #if __has_include(<FBRetainCycleDetector/FBRetainCycleDetector.h>)
 #import <FBRetainCycleDetector/FBRetainCycleDetector.h>
 #endif
+@implementation ECOMLeaksMessenger
 
-@implementation MLeaksMessenger (Echo)
-
-+ (void)load {    
++ (void)load {
 #if __has_include(<RSSwizzle/RSSwizzle.h>)
-    RSSwizzleClassMethod(MLeaksMessenger,
+    RSSwizzleClassMethod(NSClassFromString(@"MLeaksMessenger"),
                          @selector(alertWithTitle:message:delegate:additionalButtonTitle:),
                              RSSWReturnType(void),
                              RSSWArguments(NSString *title, NSString *message, id delegate, NSString *additionalButtonTitle),
@@ -35,7 +35,7 @@
         __block NSString *additionMsg = nil;
         //do additional work
         if (!delegate) {
-            [self addRecordWithTitle:title message:message additionMsg:additionMsg];
+            [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
         } else {
 #if __has_include(<FBRetainCycleDetector/FBRetainCycleDetector.h>)
             MLeakedObjectProxy *proxy = (MLeakedObjectProxy *)delegate;
@@ -49,10 +49,10 @@
                     NSInteger index = 0;
                     for (FBObjectiveCGraphElement *element in retainCycle) {
                         if (element.object == object) {
-                            NSArray *shiftedRetainCycle = [self shiftArray:retainCycle toIndex:index];
+                            NSArray *shiftedRetainCycle = [ECOMLeaksMessenger shiftArray:retainCycle toIndex:index];
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 additionMsg = [NSString stringWithFormat:@"%@", shiftedRetainCycle];
-                                [self addRecordWithTitle:title message:message additionMsg:additionMsg];
+                                [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
                             });
                             hasFound = YES;
                             break;
@@ -64,7 +64,7 @@
                 if (!hasFound) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         additionMsg = @"Fail to find a retain cycle";
-                        [self addRecordWithTitle:title message:message additionMsg:additionMsg];
+                        [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
                     });
                 }
             });
