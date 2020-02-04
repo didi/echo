@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
                         Echo调试工具SDK.
                        DESC
 
-  s.homepage         = 'https://github.com/didichuxing/echo'
+  s.homepage         = 'https://github.com/didi/echo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'chenaibin' => 'cocoa_chen@126.com' }
-  s.source           = { :git => 'https://github.com/didichuxing/echo.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/didi/echo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
