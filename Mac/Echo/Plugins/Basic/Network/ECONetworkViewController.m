@@ -91,7 +91,7 @@ NSSearchFieldDelegate>
         NSArray *packetList = [pluginModel packetList];
         NSMutableArray *list = [NSMutableArray array];
         if (searchKey.length > 0) {
-            NSMutableArray *list = [NSMutableArray array];
+            list = [NSMutableArray array];
             for (NSDictionary *dict in packetList) {
                 NSString *url = dict[@"url"];
                 if ([url containsString:searchKey]) {
