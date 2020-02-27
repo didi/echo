@@ -10,7 +10,8 @@
 #import "EchoSDKDefines.h"
 #import "ECOClient.h"
 #import "ECOMockGPSManager.h"
-#import "JZLocationConverter.h"
+
+#import <JZLocationConverter/JZLocationConverter.h>
 
 @implementation ECOMockGPSPlugin
 
