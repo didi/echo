@@ -7,8 +7,10 @@
 //
 
 #import "ECOMLeaksMessenger.h"
-#import "MLeakedObjectProxy.h"
 #import "ECOMemoryLeakManager.h"
+#if __has_include(<MLeaksFinder/MLeakedObjectProxy.h>)
+#import <MLeaksFinder/MLeakedObjectProxy.h>
+#endif
 #if __has_include(<RSSwizzle/RSSwizzle.h>)
 #import <RSSwizzle/RSSwizzle.h>
 #endif
