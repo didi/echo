@@ -63,8 +63,31 @@ static NSDateFormatter *dateFormatter = nil;
         }
     }];
     [dict setValue:urlParams forKey:@"urlParams"];
+    
+    NSData *httpBody = nil;
     if (request.HTTPBody) {
-        [dict setValue:request.HTTPBody forKey:@"body"];
+        httpBody = request.HTTPBody;
+    } else {
+        if ([request.HTTPMethod isEqualToString:@"POST"]) {
+            if (!request.HTTPBody) {
+                uint8_t d[1024] = {0};
+                NSInputStream *stream = request.HTTPBodyStream;
+                NSMutableData *data = [[NSMutableData alloc] init];
+                [stream open];
+                do {
+                    NSInteger len = [stream read:d maxLength:1024];
+                    if (len > 0 && stream.streamError == nil) {
+                        [data appendBytes:(void *)d length:len];
+                    }
+                } while ([stream hasBytesAvailable]);
+                httpBody = [data copy];
+                [stream close];
+            }
+        }
+    }
+    if (httpBody) {
+        NSString *bodyString = [ECONetworkPlugin convertJsonFromData:httpBody];
+        [dict setValue:bodyString forKey:@"body"];
     }
     
     if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
@@ -87,6 +110,23 @@ static NSDateFormatter *dateFormatter = nil;
         dateFormatter.dateFormat = @"HH:mm:ss";
     }
     return dateFormatter;
+}
+
++ (NSString *)convertJsonFromData:(NSData *)data{
+    if (!data) {
+        return nil;
+    }
+    NSString *jsonString = nil;
+    
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+    if ([NSJSONSerialization isValidJSONObject:jsonObject]) {
+        jsonString = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:NULL] encoding:NSUTF8StringEncoding];
+        // NSJSONSerialization escapes forward slashes. We want pretty json, so run through and unescape the slashes.
+        jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
+    } else {
+        jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    return jsonString;
 }
 
 @end
