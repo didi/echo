@@ -8,7 +8,11 @@
 
 #import "ECOMLeaksMessenger.h"
 #import "ECOMemoryLeakManager.h"
+#if __has_include(<MLeaksFinder/MLeakedObjectProxy.h>)
 #import <MLeaksFinder/MLeakedObjectProxy.h>
+#elif __has_include("MLeakedObjectProxy.h")
+#import "MLeakedObjectProxy.h"
+#endif
 #import <RSSwizzle/RSSwizzle.h>
 #import <FBRetainCycleDetector/FBRetainCycleDetector.h>
 
