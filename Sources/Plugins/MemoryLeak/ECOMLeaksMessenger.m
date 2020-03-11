@@ -8,8 +8,8 @@
 
 #import "ECOMLeaksMessenger.h"
 #import "ECOMemoryLeakManager.h"
-#if __has_include(<MLeaksFinder/MLeakedObjectProxy.h>)
-#import <MLeaksFinder/MLeakedObjectProxy.h>
+#if __has_include("MLeakedObjectProxy.h")
+#import "MLeakedObjectProxy.h"
 #endif
 #import <RSSwizzle/RSSwizzle.h>
 #import <FBRetainCycleDetector/FBRetainCycleDetector.h>
@@ -30,7 +30,7 @@
         if (!delegate) {
             [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
         } else {
-#if __has_include(<MLeaksFinder/MLeakedObjectProxy.h>)
+#if __has_include("MLeakedObjectProxy.h")
             MLeakedObjectProxy *proxy = (MLeakedObjectProxy *)delegate;
             id object = [proxy valueForKey:@"object"];//获取 object
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
