@@ -8,29 +8,18 @@
 
 #import "ECOMLeaksMessenger.h"
 #import "ECOMemoryLeakManager.h"
-#if __has_include(<MLeaksFinder/MLeakedObjectProxy.h>)
 #import <MLeaksFinder/MLeakedObjectProxy.h>
-#endif
-#if __has_include(<RSSwizzle/RSSwizzle.h>)
 #import <RSSwizzle/RSSwizzle.h>
-#endif
-#if __has_include(<FBRetainCycleDetector/FBRetainCycleDetector.h>)
 #import <FBRetainCycleDetector/FBRetainCycleDetector.h>
-#endif
+
 @implementation ECOMLeaksMessenger
 
 + (void)load {
-#if __has_include(<RSSwizzle/RSSwizzle.h>)
     RSSwizzleClassMethod(NSClassFromString(@"MLeaksMessenger"),
                          @selector(alertWithTitle:message:delegate:additionalButtonTitle:),
                              RSSWReturnType(void),
                              RSSWArguments(NSString *title, NSString *message, id delegate, NSString *additionalButtonTitle),
                              RSSWReplacement({
-        
-        BOOL turnOffMLeakFinderAlertForEcho = [[NSUserDefaults standardUserDefaults] boolForKey:@"DCTurnOffMLeakAlertKey"];
-        if (turnOffMLeakFinderAlertForEcho) {
-            return;//do nothing to achieve turn off alert
-        }
         //call original
         RSSWCallOriginal(title, message, delegate, additionalButtonTitle);
         
@@ -39,7 +28,6 @@
         if (!delegate) {
             [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
         } else {
-#if __has_include(<FBRetainCycleDetector/FBRetainCycleDetector.h>)
             MLeakedObjectProxy *proxy = (MLeakedObjectProxy *)delegate;
             id object = [proxy valueForKey:@"object"];//获取 object
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -70,10 +58,8 @@
                     });
                 }
             });
-#endif
         }
     }));
-#endif
 }
 
 + (void)addRecordWithTitle:(NSString *)title
