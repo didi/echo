@@ -76,7 +76,7 @@
 - (void)setDetailInfo:(NSDictionary *)detailInfo {
     _detailInfo = detailInfo;
     //headers
-    NSDictionary *headers = _detailInfo[@"responseHeader"];
+    NSDictionary *headers = _detailInfo[@"responseHeader"] ?: @{};
     NSMutableArray *headersArray = [NSMutableArray array];
     [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop) {
         NSDictionary *headerItem = @{@"key": key, @"value": obj};

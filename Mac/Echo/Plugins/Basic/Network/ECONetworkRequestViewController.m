@@ -71,7 +71,7 @@
 - (void)setDetailInfo:(NSDictionary *)detailInfo {
     _detailInfo = detailInfo;
     //headers
-    NSDictionary *headers = _detailInfo[@"headers"];
+    NSDictionary *headers = _detailInfo[@"headers"] ?: @{};
     NSMutableArray *headersArray = [NSMutableArray array];
     [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop) {
         NSDictionary *headerItem = @{@"key": key, @"value": obj};
@@ -80,7 +80,7 @@
     self.headersList = [headersArray copy];
     self.headersVC.paramsList = self.headersList;
     //query
-    NSDictionary *urlParams = _detailInfo[@"urlParams"];
+    NSDictionary *urlParams = _detailInfo[@"urlParams"] ?: @{};
     NSMutableArray *queryArray = [NSMutableArray array];
     [urlParams enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop) {
         NSDictionary *queryItem = @{@"key": key, @"value": obj};

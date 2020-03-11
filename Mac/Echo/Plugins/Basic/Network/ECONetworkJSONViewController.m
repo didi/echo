@@ -40,11 +40,9 @@
 }
 
 - (void)setJsonDict:(NSDictionary *)jsonDict {
-    _jsonDict = jsonDict;
-    if (_jsonDict) {
-        NSData *data = [NSJSONSerialization dataWithJSONObject:_jsonDict options:NSJSONWritingPrettyPrinted error:nil];
-        self.jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    }
+    _jsonDict = jsonDict ?: @{};
+    NSData *data = [NSJSONSerialization dataWithJSONObject:_jsonDict options:NSJSONWritingPrettyPrinted error:nil];
+    self.jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     [self updateJSONView];
 }
 
