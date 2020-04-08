@@ -64,6 +64,11 @@ NSTableViewDataSource>
     self.scrollView.layer.shadowOpacity = 0.6;
     self.scrollView.layer.shadowRadius = 3;
 
+    //设置复制menu
+    NSMenu *menu = [[NSMenu alloc] initWithTitle:@"菜单"];
+    [menu addItemWithTitle:@"复制" action:@selector(p_onClickedCopyMenu:) keyEquivalent:@""];
+    self.tableView.menu = menu;
+
     //配置Column
     CGFloat maxWidth = self.view.frame.size.width;
     if (self.columnsArray && self.columnsArray.count > 0) {
@@ -108,7 +113,28 @@ NSTableViewDataSource>
     self.contentTextView.string = @"";
     [self refreshWithPackets:nil];
 }
-
+//复制
+- (void)p_onClickedCopyMenu:(NSMenuItem *)menuItem {
+    NSInteger clickedRow = self.tableView.clickedRow;
+    NSInteger clickedColumn = self.tableView.clickedColumn;
+    if (clickedRow >=0 && clickedRow < self.bizArray.count) {
+        NSDictionary *item = self.bizArray[clickedRow];
+        if (clickedColumn >= 0 &&
+            clickedColumn < self.columnsArray.count) {
+            NSDictionary *columnItem = self.columnsArray[clickedColumn];
+            NSString *identifier = columnItem[@"name"] ?: @"";
+            NSDictionary *listItem = item[@"list"];
+            NSString *cpText = listItem[identifier] ?: @"";
+            //复制到粘贴板中
+            if (cpText &&
+                [cpText isKindOfClass:[NSString class]] &&
+                cpText.length) {
+                [[NSPasteboard generalPasteboard] clearContents];
+                [[NSPasteboard generalPasteboard] writeObjects:@[cpText]];
+            }
+        }
+    }
+}
 #pragma mark - ECOPluginUIProtocol methods
 - (void)refreshWithPackets:(NSArray *)packets {
     NSString *searchKey = self.searchField.stringValue;

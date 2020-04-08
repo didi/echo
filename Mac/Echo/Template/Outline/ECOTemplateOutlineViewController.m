@@ -79,7 +79,7 @@
     self.scrollView.contentView.layer.cornerRadius = 15.f;
 
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"菜单"];
-    [menu addItemWithTitle:@"删除" action:@selector(p_menuDelAction:) keyEquivalent:@"keyEquivalent"];
+    [menu addItemWithTitle:@"删除" action:@selector(p_menuDelAction:) keyEquivalent:@""];
     self.outlineView.menu = menu;
     
     for (NSTableColumn *column in self.outlineView.tableColumns) {
