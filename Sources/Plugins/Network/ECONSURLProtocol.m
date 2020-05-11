@@ -37,6 +37,10 @@ static NSString * const kEchoURLProtocolKey = @"kEchoURLProtocolKey";
         ![request.URL.scheme isEqualToString:@"https"]) {
         return NO;
     }
+    NSString *contentType = [request valueForHTTPHeaderField:@"Content-Type"];
+    if (contentType && [contentType containsString:@"multipart/form-data"]) {
+        return NO;
+    }
     return YES;
 }
 
