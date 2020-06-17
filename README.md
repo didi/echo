@@ -19,7 +19,7 @@
 
 **Echo**是一款简单易用、插件化易扩展、大屏显示和操作的客户端研发调试工具，可以实时查看App各类数据（网络请求、日志、埋点等），也可以无须改动代码快速修改预览App的效果。
 
-![img](https://static.didialift.com/pinche/gift/resource/op6D59ZwZC1592387629156.jpg)
+![img](https://github.com/didi/echo/raw/master/Images/intro.jpg)
 
 
 ## 特点
@@ -91,9 +91,9 @@
 
 ## 技术方案
 
-![img](https://static.didialift.com/pinche/gift/resource/l7g4SBH6pd1592387652100.jpg)
+![img](https://github.com/didi/echo/raw/master/Images/solution.jpg)
 
-![img](https://static.didialift.com/pinche/gift/resource/1TX3ZILaPu1592387673137.jpg)
+![img](https://github.com/didi/echo/raw/master/Images/echoArch.jpg)
 
 ## 如何使用
 
@@ -131,7 +131,7 @@ pod 'EchoSDK', :configurations => ["Debug"]
 
 ## 协议
 
-<img alt="Apache-2.0 license" src="https://lucene.apache.org/images/mantle-power.png" width="128">
+<img alt="Apache-2.0 license" src="https://www.apache.org/img/ASF20thAnniversary.jpg" width="128">
 
 Echo 基于 Apache-2.0 协议进行分发和使用，更多信息参见 [协议文件](LICENSE)。
 
