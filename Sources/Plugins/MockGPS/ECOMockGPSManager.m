@@ -60,10 +60,93 @@
     }
 }
 
+- (void)notify:(CLLocationManager *)manager block:(void (^)(id<CLLocationManagerDelegate> delegate))block {
+    id delegate = [self.locationDelegateTable objectForKey:manager];
+    if (block) {
+        block(delegate);
+    }
+}
+
 #pragma mark - CLLocationManager delegate
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-    [self notifyLocations:locations];
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didUpdateLocations:)]) {
+            [delegate locationManager:manager didUpdateLocations:locations];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didChangeAuthorizationStatus:)]) {
+            [delegate locationManager:manager didChangeAuthorizationStatus:status];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didFailWithError:)]) {
+            [delegate locationManager:manager didFailWithError:error];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didUpdateHeading:)]) {
+            [delegate locationManager:manager didUpdateHeading:newHeading];
+        }
+    }];
+}
+
+- (void)locationManagerDidPauseLocationUpdates:(CLLocationManager *)manager {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManagerDidPauseLocationUpdates:)]) {
+            [delegate locationManagerDidPauseLocationUpdates:manager];
+        }
+    }];
+}
+
+- (void)locationManagerDidResumeLocationUpdates:(CLLocationManager *)manager {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManagerDidResumeLocationUpdates:)]) {
+            [delegate locationManagerDidResumeLocationUpdates:manager];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didEnterRegion:)]) {
+            [delegate locationManager:manager didEnterRegion:region];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didExitRegion:)]) {
+            [delegate locationManager:manager didExitRegion:region];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:didStartMonitoringForRegion:)]) {
+            [delegate locationManager:manager didStartMonitoringForRegion:region];
+        }
+    }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(nullable CLRegion *)region withError:(NSError *)error {
+    [self notify:manager block:^(id<CLLocationManagerDelegate> delegate) {
+        if ([delegate respondsToSelector:@selector(locationManager:monitoringDidFailForRegion:withError:)]) {
+            [delegate locationManager:manager monitoringDidFailForRegion:region withError:error];
+        }
+    }];
 }
 
 @end
