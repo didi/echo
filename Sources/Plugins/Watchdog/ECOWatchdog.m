@@ -6,7 +6,7 @@
 //
 
 #import "ECOWatchdog.h"
-#import "BSBacktraceLogger.h"
+#import <BSBacktraceLogger/BSBacktraceLogger.h>
 
 @interface ECOWatchdog ()
 
