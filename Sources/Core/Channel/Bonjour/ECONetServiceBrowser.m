@@ -75,6 +75,7 @@ NSNetServiceBrowserDelegate>
 - (void)netServiceBrowser:(NSNetServiceBrowser *)browser didNotSearch:(NSDictionary<NSString *, NSNumber *> *)errorDict {
     NSLog(@"%s",__func__);
     //重试
+#if TARGET_OS_IPHONE
     if (@available(iOS 14.0, *)) {
         NSNetServicesError errorCode = [errorDict[@"NSNetServicesErrorCode"] integerValue];
         if (errorCode == NSNetServicesMissingRequiredConfigurationError) {
@@ -94,6 +95,7 @@ NSNetServiceBrowserDelegate>
             return;
         }
     }
+#endif
     [self resetBrowserService];
 }
 #pragma mark - NSNetServiceDelegate methods
