@@ -103,7 +103,22 @@
 pod 'EchoSDK', :configurations => ["Debug"]
 ```
 
-2、在App启动时添加以下代码
+2、由于iOS14系统本地网络权限限制，需在工程的Info.plist文件中添加NSLocalNetworkUsageDescription和NSBonjourServices配置。在Xcode中选中Info.plist文件，右键选择Open As Source Code，并添加如下内容：
+
+```
+<key>NSLocalNetworkUsageDescription</key>
+<string></string>
+<key>NSBonjourServices</key>
+<array>
+	<string>_ECHO._tcp</string>
+</array>
+```
+
+在Xcode中显示效果如下图：
+
+![img](https://github.com/didi/echo/raw/master/Images/ios14permission.jpg)
+
+3、在App启动时添加以下代码
 
 ```
 #ifdef DEBUG
@@ -117,9 +132,28 @@ pod 'EchoSDK', :configurations => ["Debug"]
 }
 ```
 
-3、启动Echo的Mac端
+4、启动Echo的Mac端
 
 手动build工程的话，可以在/Mac目录下执行`pod install`之后，启动`Echo.xcworkspace`并运行。
+
+## iOS14 适配
+
+iOS14系统对本地网络权限进行了更严格的限制，鉴于Echo底层用到了Bonjour服务，在Xcode12之后需要在工程的Info.plist文件中添加NSLocalNetworkUsageDescription和NSBonjourServices配置。在Xcode中选中Info.plist文件，右键选择Open As Source Code，并添加如下内容：
+
+```
+<key>NSLocalNetworkUsageDescription</key>
+<string></string>
+<key>NSBonjourServices</key>
+<array>
+	<string>_ECHO._tcp</string>
+</array>
+```
+
+添加之后在Xcode中显示效果如下图：
+
+![img](https://github.com/didi/echo/raw/master/Images/ios14permission.jpg)
+
+> 注：即使不进行上述适配，Echo的自动连接功能仍会生效：你可以通过USB连接真机或者直接在同一台电脑上运行模拟器来实现自动连接。
 
 ## 感谢
 
