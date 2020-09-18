@@ -81,7 +81,7 @@ NSNetServiceBrowserDelegate>
 #if TARGET_OS_IPHONE
     if (@available(iOS 14.0, *)) {
         NSNetServicesError errorCode = [errorDict[@"NSNetServicesErrorCode"] integerValue];
-        if (errorCode == NSNetServicesMissingRequiredConfigurationError) {
+        if (errorCode == -72008) {
             //iOS14新增本地网络隐私权限，提示用户如何设置并忽略
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 NSString *title = @"Echo 连接提示";
