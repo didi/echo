@@ -7,6 +7,9 @@
 //
 
 #import "ECONetServiceBrowser.h"
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#endif
 
 static uint16_t const  ECONetServicePortNumber  = 23234;
 static NSString *const ECONetServiceDomain      = @"";
