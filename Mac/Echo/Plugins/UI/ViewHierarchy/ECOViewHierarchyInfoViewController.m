@@ -9,6 +9,7 @@
 #import "ECOViewHierarchyInfoViewController.h"
 #import "YVRightCellViewInfo.h"
 #import "YVRightCellViewFrame.h"
+#import "YVRightCellViewClass.h"
 
 @interface ECOViewHierarchyInfoViewController ()
 <NSTableViewDataSource,
@@ -54,7 +55,7 @@ NSTableViewDelegate>
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     YVRightCellBase * retView;
     if (row == 0) {
-        retView = [YVRightCellViewInfo makeView:tableView owner:self identifer:@"YVRightCellViewClass"];
+        retView = [YVRightCellViewClass makeView:tableView owner:self identifer:@"YVRightCellViewClass"];
     }else if (row == 1) {
         retView = [YVRightCellViewInfo makeView:tableView owner:self identifer:@"YVRightCellViewInfo"];
     }else if (row == 2) {

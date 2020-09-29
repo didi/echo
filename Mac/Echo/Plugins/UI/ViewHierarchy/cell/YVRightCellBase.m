@@ -22,8 +22,9 @@
         NSArray * bundleviews;
         [[NSBundle mainBundle]loadNibNamed:identifer owner:owner topLevelObjects:&bundleviews];
         for (id object in bundleviews) {
-            if ([object isKindOfClass:[NSView class]]) {
+            if ([object isKindOfClass:[YVRightCellBase class]]) {
                 t = object;
+                t.identifier = identifer;
                 break;
             }
         }

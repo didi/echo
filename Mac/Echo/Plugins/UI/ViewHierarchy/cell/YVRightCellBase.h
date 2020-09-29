@@ -12,7 +12,7 @@ typedef void(^ECOViewInfoEditBlock)(NSDictionary *info);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YVRightCellBase : NSView
+@interface YVRightCellBase : NSTableCellView
 
 @property (nonatomic, copy) ECOViewInfoEditBlock editBlock;
 

@@ -154,6 +154,9 @@
                 [extraDict setObject:@{@"localframe": argv} forKey:address];
             }
         }
+        [v setNeedsDisplay];
+        [v layoutIfNeeded];
+        
         //传递新的信息到mac端
         NSDictionary *updateInfo = [v ecoUpdateInfo];
         !self.deviceSendBlock ?: self.deviceSendBlock(device, @{@"type": @"update", @"data": updateInfo, @"extra": extraDict});

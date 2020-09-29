@@ -1,78 +1,85 @@
 PODS:
   - BSBacktraceLogger (0.0.1)
   - CocoaAsyncSocket (7.6.3)
-  - EchoSDK (0.0.1):
+  - EchoSDK (0.0.6):
     - CocoaAsyncSocket
-    - EchoSDK/Plugins (= 0.0.1)
-  - EchoSDK/ClientSDK (0.0.1):
+    - EchoSDK/Plugins (= 0.0.6)
+  - EchoSDK/ClientSDK (0.0.6):
     - CocoaAsyncSocket
-  - EchoSDK/Core (0.0.1):
+    - EchoSDK/Core
+  - EchoSDK/Core (0.0.6):
     - CocoaAsyncSocket
-  - EchoSDK/Plugins (0.0.1):
+  - EchoSDK/Plugins (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-    - EchoSDK/Plugins/Basic (= 0.0.1)
-    - EchoSDK/Plugins/Crash (= 0.0.1)
-    - EchoSDK/Plugins/GeneralLog (= 0.0.1)
-    - EchoSDK/Plugins/MemoryLeak (= 0.0.1)
-    - EchoSDK/Plugins/MockGPS (= 0.0.1)
-    - EchoSDK/Plugins/Network (= 0.0.1)
-    - EchoSDK/Plugins/Notification (= 0.0.1)
-    - EchoSDK/Plugins/NSLog (= 0.0.1)
-    - EchoSDK/Plugins/NSUserDefaults (= 0.0.1)
-    - EchoSDK/Plugins/UI (= 0.0.1)
-    - EchoSDK/Plugins/ViewBorder (= 0.0.1)
-    - EchoSDK/Plugins/Watchdog (= 0.0.1)
-  - EchoSDK/Plugins/Basic (0.0.1):
+    - EchoSDK/Plugins/Basic (= 0.0.6)
+    - EchoSDK/Plugins/Crash (= 0.0.6)
+    - EchoSDK/Plugins/GeneralLog (= 0.0.6)
+    - EchoSDK/Plugins/MemoryLeak (= 0.0.6)
+    - EchoSDK/Plugins/MockGPS (= 0.0.6)
+    - EchoSDK/Plugins/Network (= 0.0.6)
+    - EchoSDK/Plugins/Notification (= 0.0.6)
+    - EchoSDK/Plugins/NSLog (= 0.0.6)
+    - EchoSDK/Plugins/NSUserDefaults (= 0.0.6)
+    - EchoSDK/Plugins/UI (= 0.0.6)
+    - EchoSDK/Plugins/ViewBorder (= 0.0.6)
+    - EchoSDK/Plugins/Watchdog (= 0.0.6)
+  - EchoSDK/Plugins/Basic (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/Crash (0.0.1):
+  - EchoSDK/Plugins/Crash (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/GeneralLog (0.0.1):
+  - EchoSDK/Plugins/GeneralLog (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
     - fishhook
-  - EchoSDK/Plugins/MemoryLeak (0.0.1):
+  - EchoSDK/Plugins/MemoryLeak (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
     - MLeaksFinder
     - RSSwizzle
-  - EchoSDK/Plugins/MockGPS (0.0.1):
+  - EchoSDK/Plugins/MockGPS (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
+    - EchoSDK/Plugins/Basic
     - JZLocationConverter
-  - EchoSDK/Plugins/Network (0.0.1):
+  - EchoSDK/Plugins/Network (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/Notification (0.0.1):
+    - EchoSDK/Plugins/Basic
+  - EchoSDK/Plugins/Notification (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/NSLog (0.0.1):
+    - EchoSDK/Plugins/Basic
+  - EchoSDK/Plugins/NSLog (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/NSUserDefaults (0.0.1):
+    - EchoSDK/Plugins/Basic
+    - fishhook
+  - EchoSDK/Plugins/NSUserDefaults (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/UI (0.0.1):
+  - EchoSDK/Plugins/UI (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/ViewBorder (0.0.1):
+  - EchoSDK/Plugins/ViewBorder (0.0.6):
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
     - EchoSDK/Core
-  - EchoSDK/Plugins/Watchdog (0.0.1):
+    - EchoSDK/Plugins/Basic
+  - EchoSDK/Plugins/Watchdog (0.0.6):
     - BSBacktraceLogger
     - CocoaAsyncSocket
     - EchoSDK/ClientSDK
@@ -106,7 +113,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BSBacktraceLogger: 06b983ee93a9f87d957960e9c73d660d5966b447
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  EchoSDK: 81d39937718db7b95e3835e71d02b5a222b20ede
+  EchoSDK: 53e6afc21b31b11243f59a714a438bff74fffa1f
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   JZLocationConverter: 3d816bee6484aed9c155a6045a02ce444833e2f0
