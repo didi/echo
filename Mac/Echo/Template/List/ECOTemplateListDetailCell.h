@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, assign) BOOL selectedMark;
 
+/// 控制 title 文字的裁切
+@property (nonatomic) NSLineBreakMode titleLineBreak;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -192,6 +192,9 @@ NSTableViewDataSource>
     NSDictionary *item = self.bizArray[row];
     NSDictionary *listItem = item[@"list"];
     NSString *textString = listItem[identifier] ?: @"";
+    // time 有大写有小写的，没法用 isEqual
+    BOOL isTimeColumn = ([identifier caseInsensitiveCompare:@"time"] == NSOrderedSame);
+    cell.titleLineBreak = isTimeColumn ? NSLineBreakByTruncatingHead : NSLineBreakByClipping;
     cell.title = textString;
     cell.selectedMark = self.selectedIndex == row;
     return cell;
