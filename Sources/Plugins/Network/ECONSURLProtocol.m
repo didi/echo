@@ -11,14 +11,12 @@
 static NSString * const kEchoURLProtocolKey = @"kEchoURLProtocolKey";
 
 @interface ECONSURLProtocol () <NSURLSessionDataDelegate>
+@property NSURLSession *session;
 
-@property (atomic, strong) NSURLSessionDataTask *dataTask;
-@property (atomic, strong) NSURLSessionConfiguration *sessionConfiguration;
-
-@property (nonatomic, strong) NSDate *startTime;
-@property (nonatomic, strong) NSMutableData *data;
-@property (nonatomic, strong) NSURLResponse *response;
-@property (nonatomic, strong) NSError *error;
+@property (nonatomic) NSDate *startTime;
+@property (nonatomic) NSMutableData *data;
+@property (nonatomic) NSURLResponse *response;
+@property (nonatomic) NSError *error;
 
 @end
 
@@ -47,25 +45,23 @@ static NSString * const kEchoURLProtocolKey = @"kEchoURLProtocolKey";
 + (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request{
     NSMutableURLRequest *mutableReqeust = [request mutableCopy];
     [NSURLProtocol setProperty:@YES forKey:kEchoURLProtocolKey inRequest:mutableReqeust];
-    return [mutableReqeust copy];
+    return mutableReqeust;
 }
 
 - (void)startLoading {
-    self.sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     self.startTime = [NSDate date];
-    self.data = [NSMutableData data];
-    
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration
-                                                          delegate:self
-                                                     delegateQueue:nil];
+    self.data = [NSMutableData.alloc initWithCapacity:1024 * 4];
 
-    self.dataTask = [session dataTaskWithRequest:self.request];
-    [self.dataTask resume];
+    NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
+    self.session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+
+    NSURLSessionTask *task = [self.session dataTaskWithRequest:self.request];
+    [task resume];
 }
 
 - (void)stopLoading {
     [[ECONetworkInterceptor sharedInstance] interceptWithRequest:self.request data:self.data response:self.response error:self.error startTime:self.startTime];
-    [self.dataTask cancel];
+    [self.session invalidateAndCancel];
 }
 
 #pragma mark - NSURLSessionTaskDelegate
