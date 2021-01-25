@@ -172,7 +172,7 @@ NSTableViewDataSource>
         NSDictionary *column = self.columnsArray[i];
         NSString *identifier = column[@"name"] ?: @"";
         NSString *cellTitle = listItem[identifier] ?: @"";
-        if ([cellTitle containsString:key]) {
+        if ([cellTitle localizedCaseInsensitiveContainsString:key]) {
             return YES;
         }
     }
