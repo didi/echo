@@ -48,6 +48,14 @@
     _selectedMark = selectedMark;
     self.bgBox.hidden = !_selectedMark;
 }
+
+- (NSLineBreakMode)titleLineBreak {
+    return self.titleLabel.cell.lineBreakMode;
+}
+- (void)setTitleLineBreak:(NSLineBreakMode)titleLineBreak {
+    self.titleLabel.cell.lineBreakMode = titleLineBreak;
+}
+
 #pragma mark - getters
 - (NSBox *)bgBox {
     if (!_bgBox) {
