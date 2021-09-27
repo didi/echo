@@ -7,7 +7,7 @@
 //
 
 #import "ECONSLogManager.h"
-#import <fishhook/fishhook.h>
+#import "ECOFishhook.h"
 
 //函数指针，用来保存原始的函数的地址
 static void(*old_nslog)(NSString *format, ...);

@@ -12,7 +12,6 @@
 #import "MLeakedObjectProxy.h"
 #endif
 #import <RSSwizzle/RSSwizzle.h>
-#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
 
 @implementation ECOMLeaksMessenger
 
@@ -29,39 +28,6 @@
         //do additional work
         if (!delegate) {
             [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
-        } else {
-#if __has_include("MLeakedObjectProxy.h")
-            MLeakedObjectProxy *proxy = (MLeakedObjectProxy *)delegate;
-            id object = [proxy valueForKey:@"object"];//获取 object
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                FBRetainCycleDetector *detector = [FBRetainCycleDetector new];
-                [detector addCandidate:object];
-                NSSet *retainCycles = [detector findRetainCyclesWithMaxCycleLength:20];
-                BOOL hasFound = NO;
-                for (NSArray *retainCycle in retainCycles) {
-                    NSInteger index = 0;
-                    for (FBObjectiveCGraphElement *element in retainCycle) {
-                        if (element.object == object) {
-                            NSArray *shiftedRetainCycle = [ECOMLeaksMessenger shiftArray:retainCycle toIndex:index];
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                                additionMsg = [NSString stringWithFormat:@"%@", shiftedRetainCycle];
-                                [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
-                            });
-                            hasFound = YES;
-                            break;
-                        }
-                        ++index;
-                    }
-                    if (hasFound) break;
-                }
-                if (!hasFound) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        additionMsg = @"Fail to find a retain cycle";
-                        [ECOMLeaksMessenger addRecordWithTitle:title message:message additionMsg:additionMsg];
-                    });
-                }
-            });
-#endif
         }
     }));
 }

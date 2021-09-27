@@ -1,6 +1,6 @@
 PODS:
-  - CocoaAsyncSocket (7.6.3)
-  - EchoSDK/Core (0.0.2):
+  - CocoaAsyncSocket (7.6.5)
+  - EchoSDK/Core (0.0.8):
     - CocoaAsyncSocket
   - Masonry (1.1.0)
 
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
-  EchoSDK: f95cba4b93699960b99bb70774860abde512cb0f
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  EchoSDK: b3395f8a1b26289b556722a069e40ba368a0b022
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 0b91a250fb76a58eb333235430d240604b1c8589
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

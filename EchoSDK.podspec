@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EchoSDK'
-  s.version          = '0.0.7'
+  s.version          = '0.0.8'
   s.summary          = 'Echo调试工具SDK.'
 
 # This description is used to generate tags and improve search results.
@@ -57,13 +57,12 @@ Pod::Spec.new do |s|
     end
     plugins.subspec 'GeneralLog' do |ss|
       ss.ios.source_files = 'Sources/Plugins/GeneralLog/**/*'
-      ss.ios.dependency "fishhook"
     end
-    plugins.subspec 'MemoryLeak' do |ss|
-      ss.ios.source_files = 'Sources/Plugins/MemoryLeak/**/*'
-      ss.ios.dependency "MLeaksFinder"
-      ss.ios.dependency "RSSwizzle"
-    end
+#    plugins.subspec 'MemoryLeak' do |ss|
+#      ss.ios.source_files = 'Sources/Plugins/MemoryLeak/**/*'
+#      ss.ios.dependency "MLeaksFinder"
+#      ss.ios.dependency "RSSwizzle"
+#    end
     plugins.subspec 'MockGPS' do |ss|
       ss.ios.source_files = 'Sources/Plugins/MockGPS/**/*'
       ss.ios.dependency "JZLocationConverter"
@@ -80,7 +79,6 @@ Pod::Spec.new do |s|
     plugins.subspec 'NSLog' do |ss|
       ss.ios.source_files = 'Sources/Plugins/NSLog/**/*'
       ss.ios.dependency 'EchoSDK/Plugins/Basic'
-      ss.ios.dependency "fishhook"
     end
     plugins.subspec 'UI' do |ss|
       ss.ios.source_files = 'Sources/Plugins/UI/**/*'
